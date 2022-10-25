@@ -1,7 +1,13 @@
 <testExecutions version="1">
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'museums-front'" duration="118"/>
-    <testCase name="AppComponent should create the app" duration="14"/>
-    <testCase name="AppComponent should render title" duration="13"/>
+    <testCase name="AppComponent should render title" duration="42"/>
+    <testCase name="AppComponent should have as title 'museums-front'" duration="5"/>
+    <testCase name="AppComponent should create the app" duration="4"/>
+  </file>
+  <file path="src/app/artwork/artwork.service.spec.ts">
+    <testCase name="Service: Artwork should ..." duration="1"/>
+  </file>
+  <file path="src/app/artwork/artwork-list/artwork-list.component.spec.ts">
+    <testCase name="ArtworkListComponent should create" duration="6"/>
   </file>
 </testExecutions>

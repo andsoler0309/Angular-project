@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Artworks</h1>
+      <div class="row">
+        <div class="col-md-3" *ngFor="let artwork of artworks">
+          <div class="card p-2">
+            <img
+              class="card-img-top"
+              alt="{{ artwork.images[0].altText }}"
+              [attr.src]="artwork.images[0].source"
+              (error)="pictNotLoading($event)"
+              [style.--width]="artwork.images[0].width" [style.--height]="artwork.images[0].height"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ artwork.name }}</h5>
+                <p class="card-text">Artist: {{ artwork.artist.name }}</p>
+                <p class="card-text">Year: {{ artwork.year }}</p>
+                <p class="card-text">{{ artwork.description }}</p>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
