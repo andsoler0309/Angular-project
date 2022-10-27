@@ -23,7 +23,7 @@ describe('ArtworkListComponent', () => {
       declarations: [ ArtworkListComponent ],
       providers: [ ArtworkService ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -36,7 +36,7 @@ describe('ArtworkListComponent', () => {
         faker.random.words(),
         faker.random.words(),
         faker.random.words()
-        )
+      )
     ];
 
     const artist = new Artist(
@@ -59,14 +59,14 @@ describe('ArtworkListComponent', () => {
 
     for(let i = 0; i < 10; i++) {
       const artwork = new Artwork(
-          faker.datatype.number(),
-          faker.name.firstName(),
-          faker.date.past().toString(),
-          faker.lorem.paragraph(),
-          faker.lorem.word(),
-          artist,
-          images
-        )
+        faker.datatype.number(),
+        faker.name.firstName(),
+        faker.date.past().toString(),
+        faker.lorem.paragraph(),
+        faker.lorem.word(),
+        artist,
+        images
+      );
       component.artworks.push(artwork);
     }
 
@@ -125,42 +125,42 @@ describe('ArtworkListComponent', () => {
   });
 
   it('should have 10 <div.card-body> elements', () => {
-    expect(debug.queryAll(By.css('div.card-body'))).toHaveSize(10)
+    expect(debug.queryAll(By.css('div.card-body'))).toHaveSize(10);
   });
 
   it('should have 10 <img> elements', () => {
-    expect(debug.queryAll(By.css('img'))).toHaveSize(10)
+    expect(debug.queryAll(By.css('img'))).toHaveSize(10);
   });
 
   it('should have the corresponding src to the artwork image and alt to the artwork name', () => {
     debug.queryAll(By.css('img')).forEach((img, i)=>{
       expect(img.attributes['src']).toEqual(
-        component.artworks[i].images[0].source)
+        component.artworks[i].images[0].source);
 
       expect(img.attributes['alt']).toEqual(
-        component.artworks[i].images[0].altText)
-    })
+        component.artworks[i].images[0].altText);
+    });
   });
 
   it('should have 10 <h5.card-title> elements', () => {
-    expect(debug.queryAll(By.css('h5.card-title'))).toHaveSize(10)
+    expect(debug.queryAll(By.css('h5.card-title'))).toHaveSize(10);
   });
 
   it('should have the corresponding title to the artwork title', () => {
     debug.queryAll(By.css('h5.card-title')).forEach((title, i)=>{
       expect(title.nativeElement.textContent).toEqual(
-        component.artworks[i].name)
-    })
+        component.artworks[i].name);
+    });
   });
 
   it('should have 30 <p.card-text> elements', () => {
-    expect(debug.queryAll(By.css('p.card-text'))).toHaveSize(30)
+    expect(debug.queryAll(By.css('p.card-text'))).toHaveSize(30);
   });
 
   it('should have the corresponding description to the artwork description', () => {
     debug.queryAll(By.css('p.card-description')).forEach((description, i)=>{
       expect(description.nativeElement.textContent).toEqual(
-        component.artworks[i].description)
-    })
+        component.artworks[i].description);
+    });
   });
 });

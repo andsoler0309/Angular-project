@@ -1,5 +1,5 @@
-import { Artist } from "../artist/artist";
-import { Image } from "../image/image";
+import { Artist } from '../artist/artist';
+import { Image } from '../image/image';
 
 
 export class Artwork {
@@ -28,4 +28,4 @@ export class Artwork {
     this.artist = artist;
     this.images = images;
   }
- }
+}

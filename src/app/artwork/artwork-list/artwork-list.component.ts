@@ -23,7 +23,7 @@ export class ArtworkListComponent implements OnInit {
   }
 
   pictNotLoading(event: any): void {
-    let actualSource = event.target.src;
+    const actualSource = event.target.src;
 
     this.artworks.forEach((artwork) => {
       let flag = 0;

@@ -12,7 +12,7 @@ import { MovementModule } from './movement/movement.module';
 @NgModule({
   declarations: [
     AppComponent,
-   ],
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
