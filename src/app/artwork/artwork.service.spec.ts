@@ -14,4 +14,5 @@ describe('Service: Artwork', () => {
   it('should ...', inject([ArtworkService], (service: ArtworkService) => {
     expect(service).toBeTruthy();
   }));
+
 });
