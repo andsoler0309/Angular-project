@@ -22,8 +22,10 @@ export class ArtworkListComponent implements OnInit {
     this.getArtworks();
   }
 
-  pictNotLoading(event: any): void {
-    const actualSource = event.target.src;
+  pictNotLoading(event: ErrorEvent): void {
+    const eventTarget = event.target as HTMLImageElement; // cast to HTMLImageElement to access src property
+
+    const actualSource = eventTarget.src;
 
     this.artworks.forEach((artwork) => {
       let flag = 0;
@@ -34,10 +36,10 @@ export class ArtworkListComponent implements OnInit {
       });
 
       if (flag === 1) {
-        event.target.src = artwork.images[1].source;
-        event.target.alt = artwork.images[1].altText;
-        event.target.height = artwork.images[1].height;
-        event.target.width = artwork.images[1].width;
+        eventTarget.src = artwork.images[1].source;
+        eventTarget.alt = artwork.images[1].altText;
+        eventTarget.height = artwork.images[1].height;
+        eventTarget.width = artwork.images[1].width;
       }
     });
   }
