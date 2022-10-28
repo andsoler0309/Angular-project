@@ -153,10 +153,6 @@ describe('ArtworkListComponent', () => {
     });
   });
 
-  it('should have 30 <p.card-text> elements', () => {
-    expect(debug.queryAll(By.css('p.card-text'))).toHaveSize(30);
-  });
-
   it('should have the corresponding description to the artwork description', () => {
     debug.queryAll(By.css('p.card-description')).forEach((description, i)=>{
       expect(description.nativeElement.textContent).toEqual(
