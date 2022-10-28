@@ -20,5 +20,6 @@ export class ExhibitionListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getExhibitions();
+    console.log(this.exhibitions);
   }
 }

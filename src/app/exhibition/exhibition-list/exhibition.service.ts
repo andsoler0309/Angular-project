@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ExhibitionService {
-  private apiUrl: string = environment.baseUrl + 'exhibitions';
+  private currentMuseumID = 102;
+  private apiUrl: string = environment.baseUrl + 'museums/' + this.currentMuseumID + '/exhibitions';
 
   constructor(private http: HttpClient) { }
 
