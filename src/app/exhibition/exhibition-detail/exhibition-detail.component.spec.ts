@@ -13,7 +13,7 @@ describe('ExhibitionDetailComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ ExhibitionDetailComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

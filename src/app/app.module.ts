@@ -2,7 +2,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +21,7 @@ import { ExhibitionModule } from './exhibition/exhibition.module';
     BrowserModule,
     MuseumModule,
     AppRoutingModule,
-    NgxPaginationModule
+    NgxPaginationModule,
     AppRoutingModule,
     HttpClientModule,
     ArtistModule,
