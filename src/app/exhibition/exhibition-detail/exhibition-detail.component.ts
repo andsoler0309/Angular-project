@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Exhibition } from '../exhibition';
+import { Component, OnInit, Input } from '@angular/core';
 import { ExhibitionService } from '../exhibition-list/exhibition.service';
 
 @Component({
@@ -8,16 +7,12 @@ import { ExhibitionService } from '../exhibition-list/exhibition.service';
   styleUrls: ['./exhibition-detail.component.css']
 })
 export class ExhibitionDetailComponent implements OnInit {
-  public currentTitle: string = 'Título de la exhibición';
-  public currentDescription: string = 'Descripción';
+  test:boolean = false;
+  @Input() name = '';
+  @Input() description = '';
   constructor(private exhibitionService: ExhibitionService) { }
 
-  public changeDetail(): void {
-    this.currentTitle = this.exhibitionService.getName();
-    this.currentDescription = this.exhibitionService.getDescription();
-  }
 
   ngOnInit() {
   }
-
 }

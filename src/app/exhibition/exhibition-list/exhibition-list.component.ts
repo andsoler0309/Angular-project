@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Exhibition } from '../exhibition';
 import { ExhibitionService } from './exhibition.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,6 +12,9 @@ import { ExhibitionService } from './exhibition.service';
 export class ExhibitionListComponent implements OnInit {
 
   exhibitions: Array<Exhibition> = [];
+  currentName: string = '';
+  currentDescription: string = '';
+
   constructor(private exhibitionService: ExhibitionService) { }
 
   getExhibitions(): void {
@@ -24,13 +28,11 @@ export class ExhibitionListComponent implements OnInit {
   }
 
   displayDetail(name:string){
-    let detail = 'Esa exhibición no existe.'
     for (var ex of this.exhibitions){
       if(ex.name == name){
-        detail = ex.description;
+        this.currentDescription = ex.description;
+        this.currentName = name;
       }
     }
-    this.exhibitionService.changeName(name);
-    this.exhibitionService.changeDescription(detail);
   }
 }
