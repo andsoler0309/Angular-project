@@ -1,28 +1,30 @@
 <testExecutions version="1">
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="28"/>
-    <testCase name="AppComponent should have as title 'museums-front'" duration="3"/>
-  </file>
   <file path="src/app/artwork/artwork.service.spec.ts">
-    <testCase name="Service: Artwork should ..." duration="1"/>
+    <testCase name="Service: Artwork should ..." duration="6"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should have as title 'museums-front'" duration="19"/>
+    <testCase name="AppComponent should create the app" duration="3"/>
   </file>
   <file path="src/app/artwork/artwork-list/artwork-list.component.spec.ts">
-    <testCase name="ArtworkListComponent should have the corresponding title to the artwork title" duration="11"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist movements description" duration="3"/>
-    <testCase name="ArtworkListComponent should have 10 &lt;h5.card-title> elements" duration="4"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with image" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist country" duration="3"/>
-    <testCase name="ArtworkListComponent should create" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist movements name" duration="2"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with image url" duration="8"/>
+    <testCase name="ArtworkListComponent should have a list of artworks" duration="4"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with image" duration="3"/>
+    <testCase name="ArtworkListComponent should have 10 &lt;img> elements" duration="4"/>
+    <testCase name="ArtworkListComponent should have the corresponding title to the artwork title" duration="3"/>
+    <testCase name="ArtworkListComponent should get artowkrs from the service" duration="3"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with title" duration="3"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist movements description" duration="2"/>
+    <testCase name="ArtworkListComponent should have 10 &lt;h5.card-title> elements" duration="2"/>
+    <testCase name="ArtworkListComponent should have the corresponding src to the artwork image and alt to the artwork name" duration="2"/>
     <testCase name="ArtworkListComponent should have a list of artworks with artist movements" duration="2"/>
     <testCase name="ArtworkListComponent should have 10 &lt;div.card-body> elements" duration="2"/>
-    <testCase name="ArtworkListComponent should have the corresponding src to the artwork image and alt to the artwork name" duration="3"/>
-    <testCase name="ArtworkListComponent should have 10 &lt;img> elements" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist name" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with title" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with image url" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks" duration="1"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist birthdate" duration="2"/>
+    <testCase name="ArtworkListComponent should create" duration="2"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist movements name" duration="2"/>
+    <testCase name="ArtworkListComponent should call picnotload when the image fails to load" duration="2"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist" duration="3"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist name" duration="1"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist country" duration="1"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist birthdate" duration="1"/>
   </file>
 </testExecutions>

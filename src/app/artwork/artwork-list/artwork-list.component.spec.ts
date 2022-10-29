@@ -152,4 +152,18 @@ describe('ArtworkListComponent', () => {
         component.artworks[i].name);
     });
   });
+
+  it('should get artowkrs from the service', () => {
+    const service = TestBed.inject(ArtworkService);
+    spyOn(service, 'getArtworks').and.callThrough();
+    component.ngOnInit();
+    expect(service.getArtworks).toHaveBeenCalled();
+  });
+
+  it ('should call picnotload when the image fails to load', () => {
+    spyOn(component, 'pictNotLoading');
+    const img = debug.query(By.css('img'));
+    img.triggerEventHandler('error', null);
+    expect(component.pictNotLoading).toHaveBeenCalled();
+  });
 });
