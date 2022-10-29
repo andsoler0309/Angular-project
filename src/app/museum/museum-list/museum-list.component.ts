@@ -9,6 +9,8 @@ import { MuseumService } from '../museum.service';
 })
 export class MuseumListComponent implements OnInit {
 
+  p: number = 1;
+
   museums: Array<Museum> = [];
 
   constructor(private museumService: MuseumService) { }
