@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ArtistModule } from './artist/artist.module';
 import { ArtworkModule } from './artwork/artwork.module';
 import { MovementModule } from './movement/movement.module';
+import { ExhibitionModule } from './exhibition/exhibition.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MovementModule } from './movement/movement.module';
     HttpClientModule,
     ArtistModule,
     ArtworkModule,
-    MovementModule
+    MovementModule,
+    ExhibitionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

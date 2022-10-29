@@ -1,0 +1,14 @@
+<div class="card" *ngIf="description || name">
+  <div class="card-body">
+    <h5 class="card-title">{{ name }}</h5>
+    <p class="card-text">{{ description }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" id="patrocinadores">Patrocinado por</li>
+    <li class="list-group-item" id="sponsorName">{{sponsorName}}</li>
+    <li class="list-group-item">{{sponsorDescription}}</li>
+  </ul>
+  <div class="card-body">
+    <a href="{{sponsorWebsite}}" class="btn btn-outline-info">Visita su sitio web</a>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<h1>Exhibitions</h1>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-3" *ngFor="let exhibition of exhibitions">
+          <button (click)="displayDetail(exhibition.name)" type="button" class="btn btn-dark">{{ exhibition.name }}</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<app-exhibition-detail [name] = "currentName" [description]="currentDescription" [sponsorName]="currentSponsorName" [sponsorDescription] = "currentSponsorDescription" [sponsorWebsite]="currentSponsorWebsite"></app-exhibition-detail>
