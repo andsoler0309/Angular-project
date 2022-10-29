@@ -14,6 +14,9 @@ export class ExhibitionListComponent implements OnInit {
   exhibitions: Array<Exhibition> = [];
   currentName: string = '';
   currentDescription: string = '';
+  currentSponsorName: string = '';
+  currentSponsorDescription: string = '';
+  currentSponsorWebsite: string = '';
 
   constructor(private exhibitionService: ExhibitionService) { }
 
@@ -32,6 +35,9 @@ export class ExhibitionListComponent implements OnInit {
       if(ex.name == name){
         this.currentDescription = ex.description;
         this.currentName = name;
+        this.currentSponsorName = ex.sponsor.name;
+        this.currentSponsorDescription = ex.sponsor.description;
+        this.currentSponsorWebsite = ex.sponsor.website;
       }
     }
   }

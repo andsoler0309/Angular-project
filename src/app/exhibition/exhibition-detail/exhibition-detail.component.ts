@@ -7,9 +7,12 @@ import { ExhibitionService } from '../exhibition-list/exhibition.service';
   styleUrls: ['./exhibition-detail.component.css']
 })
 export class ExhibitionDetailComponent implements OnInit {
-  test:boolean = false;
   @Input() name = '';
   @Input() description = '';
+  @Input() sponsorName = '';
+  @Input() sponsorDescription = '';
+  @Input() sponsorWebsite = '';
+
   constructor(private exhibitionService: ExhibitionService) { }
 
 

@@ -6,3 +6,13 @@
 .card h5 {
   color: #3C1642;
 }
+
+#patrocinadores {
+  color: #3C1642;
+  font-weight: bold;
+}
+
+#sponsorName {
+  color: #1CA5B8;
+  font-weight: bold;
+}
