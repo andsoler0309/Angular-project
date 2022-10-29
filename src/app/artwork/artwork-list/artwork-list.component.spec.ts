@@ -75,7 +75,7 @@ describe('ArtworkListComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component.artworks).toBeTruthy();
   });
 
   it('should have a list of artworks', () => {
@@ -150,13 +150,6 @@ describe('ArtworkListComponent', () => {
     debug.queryAll(By.css('h5.card-title')).forEach((title, i)=>{
       expect(title.nativeElement.textContent).toEqual(
         component.artworks[i].name);
-    });
-  });
-
-  it('should have the corresponding description to the artwork description', () => {
-    debug.queryAll(By.css('p.card-description')).forEach((description, i)=>{
-      expect(description.nativeElement.textContent).toEqual(
-        component.artworks[i].description);
     });
   });
 });
