@@ -20,6 +20,14 @@ export class ExhibitionListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getExhibitions();
-    console.log(this.exhibitions);
+  }
+  displayDetail(name:string){
+    let detail = "Esa exhibición no existe."
+    for (var ex of this.exhibitions){
+      if(ex.name == name){
+        detail = ex.description;
+      }
+    }
+    console.log(detail);
   }
 }
