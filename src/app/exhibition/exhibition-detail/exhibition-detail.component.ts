@@ -8,16 +8,16 @@ import { ExhibitionService } from '../exhibition-list/exhibition.service';
   styleUrls: ['./exhibition-detail.component.css']
 })
 export class ExhibitionDetailComponent implements OnInit {
-  exhibitions: Array<Exhibition> = [];
+  public currentTitle: string = 'Título de la exhibición';
+  public currentDescription: string = 'Descripción';
   constructor(private exhibitionService: ExhibitionService) { }
 
-  getExhibitions(): void {
-    this.exhibitionService.getExhibitions().subscribe((exhibitions) => {
-      this.exhibitions = exhibitions;
-    });}
+  public changeDetail(): void {
+    this.currentTitle = this.exhibitionService.getName();
+    this.currentDescription = this.exhibitionService.getDescription();
+  }
 
   ngOnInit() {
-    this.getExhibitions();
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Exhibition } from '../exhibition';
 import { ExhibitionService } from './exhibition.service';
 
+
 @Component({
   selector: 'app-exhibition-list',
   templateUrl: './exhibition-list.component.html',
@@ -21,13 +22,15 @@ export class ExhibitionListComponent implements OnInit {
   ngOnInit(): void {
     this.getExhibitions();
   }
+
   displayDetail(name:string){
-    let detail = "Esa exhibición no existe."
+    let detail = 'Esa exhibición no existe.'
     for (var ex of this.exhibitions){
       if(ex.name == name){
         detail = ex.description;
       }
     }
-    console.log(detail);
+    this.exhibitionService.changeName(name);
+    this.exhibitionService.changeDescription(detail);
   }
 }
