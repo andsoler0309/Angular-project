@@ -1,16 +1,18 @@
-import { TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { TestBed, inject } from '@angular/core/testing';
 import { MuseumService } from './museum.service';
 
 describe('MuseumService', () => {
-  let service: MuseumService;
-
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(MuseumService);
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule, NgxPaginationModule],
+      providers: [MuseumService]
+    });
   });
 
-  it('should be created', () => {
+  it('should ...', inject([MuseumService], (service: MuseumService) => {
     expect(service).toBeTruthy();
-  });
+  }));
+
 });
