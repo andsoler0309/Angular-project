@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Exhibition } from '../exhibition';
 import { ExhibitionService } from './exhibition.service';
 import { Observable } from 'rxjs';
-
+import { ExhibitionDetailComponent } from '../exhibition-detail/exhibition-detail.component';
 
 @Component({
   selector: 'app-exhibition-list',

@@ -1,9 +1,8 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Exhibition } from '../exhibition';
 import { Observable } from 'rxjs';
-import { ExhibitionDetailComponent } from '../exhibition-detail/exhibition-detail.component';
 
 @Injectable({
   providedIn: 'root'

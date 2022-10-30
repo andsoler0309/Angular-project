@@ -1,5 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -9,6 +9,7 @@ import { faker } from '@faker-js/faker';
 import { ExhibitionListComponent } from './exhibition-list.component';
 import { Exhibition } from '../exhibition';
 import { Sponsor } from 'src/app/sponsor';
+import { ExhibitionService } from './exhibition.service';
 
 describe('ExhibitionListComponent', () => {
   let component: ExhibitionListComponent;
@@ -45,9 +46,9 @@ describe('ExhibitionListComponent', () => {
     fixture.detectChanges();
     debug = fixture.debugElement;
   });
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('should ...', inject([ExhibitionService], (service: ExhibitionService) => {
+    expect(service).toBeTruthy();
+  }));
 
   it('should have 10 <button> elements', () => {
     expect(debug.queryAll(By.css('button'))).toHaveSize(10)
