@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.navbar-custom {
+  background-color: #3C1642;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: white;
+}
+
+nav .navbar-nav li a{
+color: white !important;
+}
+.active{
+  color: red!important
+}
