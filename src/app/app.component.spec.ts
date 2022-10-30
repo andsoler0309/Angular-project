@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MuseumListComponent } from './museum/museum-list/museum-list.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ArtworkListComponent } from './artwork/artwork-list/artwork-list.component';
+import { ExhibitionListComponent } from './exhibition/exhibition-list/exhibition-list.component'
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -13,7 +14,7 @@ describe('AppComponent', () => {
         RouterTestingModule, HttpClientModule, NgxPaginationModule
       ],
       declarations: [
-        AppComponent, MuseumListComponent, ArtworkListComponent
+        AppComponent, MuseumListComponent, ArtworkListComponent, ExhibitionListComponent
       ],
     }).compileComponents();
   });
