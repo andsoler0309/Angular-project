@@ -18,6 +18,7 @@
 
 .card.p-2:hover {
   box-shadow: 0 0 11px #1DD3B0;
+  cursor: pointer;
 
 }
 

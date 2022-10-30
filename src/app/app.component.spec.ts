@@ -3,12 +3,13 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { ArtworkListComponent } from './artwork/artwork-list/artwork-list.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule, HttpClientModule
+        RouterTestingModule, HttpClientModule, NgxPaginationModule
       ],
       declarations: [
         AppComponent, ArtworkListComponent
