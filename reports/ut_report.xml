@@ -1,30 +1,90 @@
 <testExecutions version="1">
   <file path="src/app/artwork/artwork.service.spec.ts">
-    <testCase name="Service: Artwork should ..." duration="6"/>
-  </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'museums-front'" duration="19"/>
-    <testCase name="AppComponent should create the app" duration="3"/>
+    <testCase name="Service: Artwork should ..." duration="10"/>
   </file>
   <file path="src/app/artwork/artwork-list/artwork-list.component.spec.ts">
-    <testCase name="ArtworkListComponent should have a list of artworks with image url" duration="8"/>
-    <testCase name="ArtworkListComponent should have a list of artworks" duration="4"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with image" duration="3"/>
-    <testCase name="ArtworkListComponent should have 10 &lt;img> elements" duration="4"/>
-    <testCase name="ArtworkListComponent should have the corresponding title to the artwork title" duration="3"/>
-    <testCase name="ArtworkListComponent should get artowkrs from the service" duration="3"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with title" duration="3"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist movements description" duration="2"/>
-    <testCase name="ArtworkListComponent should have 10 &lt;h5.card-title> elements" duration="2"/>
-    <testCase name="ArtworkListComponent should have the corresponding src to the artwork image and alt to the artwork name" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist movements" duration="2"/>
-    <testCase name="ArtworkListComponent should have 10 &lt;div.card-body> elements" duration="2"/>
-    <testCase name="ArtworkListComponent should create" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist movements name" duration="2"/>
-    <testCase name="ArtworkListComponent should call picnotload when the image fails to load" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist" duration="3"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist name" duration="1"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist country" duration="1"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist birthdate" duration="1"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist movements name" duration="37"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist movements" duration="7"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist country" duration="6"/>
+    <testCase name="ArtworkListComponent should have the corresponding src to the artwork image and alt to the artwork name" duration="10"/>
+    <testCase name="ArtworkListComponent should have 10 &lt;img> elements" duration="6"/>
+    <testCase name="ArtworkListComponent should have 10 &lt;div.card-body> elements" duration="6"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with image" duration="6"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist movements description" duration="5"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with title" duration="8"/>
+    <testCase name="ArtworkListComponent should have a list of artworks" duration="6"/>
+    <testCase name="ArtworkListComponent should have the corresponding title to the artwork title" duration="6"/>
+    <testCase name="ArtworkListComponent should create" duration="4"/>
+    <testCase name="ArtworkListComponent should have 10 &lt;h5.card-title> elements" duration="4"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with image url" duration="4"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist" duration="5"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist name" duration="3"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist birthdate" duration="3"/>
+  </file>
+  <file path="src/app/exhibition/exhibition-list/exhibition-list.component.spec.ts">
+    <testCase name="ExhibitionListComponent should have 10 &lt;button> elements" duration="10"/>
+    <testCase name="ExhibitionListComponent should create" duration="4"/>
+  </file>
+  <file path="src/app/exhibition/exhibition-detail/exhibition-detail.component.spec.ts">
+    <testCase name="ExhibitionDetailComponent should create" duration="8"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should have as title 'museums-front'" duration="6"/>
+    <testCase name="AppComponent should create the app" duration="4"/>
+  </file>
+  <file path="src/app/museum/museum-list/museum-list.component.spec.ts">
+    <testCase name="MuseumListComponent should create" duration="31">
+      <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[MuseumService -&gt; HttpClient -&gt; HttpClient]:
+  NullInjectorError: No provider for HttpClient!
+error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'MuseumService', 'HttpClient', 'HttpClient' ] })
+NullInjectorError: R3InjectorError(DynamicTestModule)[MuseumService -&gt; HttpClient -&gt; HttpClient]:
+  NullInjectorError: No provider for HttpClient!
+    at NullInjector.get (node_modules/@angular/core/fesm2015/core.mjs:11120:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
+    at injectInjectorOnly (node_modules/@angular/core/fesm2015/core.mjs:4765:1)
+    at ɵɵinject (node_modules/@angular/core/fesm2015/core.mjs:4769:1)
+    at Object.MuseumService_Factory [as factory] (ng:///MuseumService/ɵfac.js:4:41)
+    at R3Injector.hydrate (node_modules/@angular/core/fesm2015/core.mjs:11457:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11276:1)
+    at NgModuleRef.get (node_modules/@angular/core/fesm2015/core.mjs:21832:1)
+    at Object.get (node_modules/@angular/core/fesm2015/core.mjs:21509:1)
+
+Error: Expected undefined to be truthy.
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (src/app/museum/museum-list/museum-list.component.spec.ts:23:23)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
+</failure>
+    </testCase>
+  </file>
+  <file path="src/app/exhibition/exhibition-list/exhibition.service.spec.ts">
+    <testCase name="Service: Exhibition should ..." duration="1"/>
+  </file>
+  <file path="src/app/museum/museum.service.spec.ts">
+    <testCase name="MuseumService should be created" duration="3">
+      <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[MuseumService -&gt; HttpClient -&gt; HttpClient]:
+  NullInjectorError: No provider for HttpClient!
+error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'MuseumService', 'HttpClient', 'HttpClient' ] })
+NullInjectorError: R3InjectorError(DynamicTestModule)[MuseumService -&gt; HttpClient -&gt; HttpClient]:
+  NullInjectorError: No provider for HttpClient!
+    at NullInjector.get (node_modules/@angular/core/fesm2015/core.mjs:11120:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
+    at injectInjectorOnly (node_modules/@angular/core/fesm2015/core.mjs:4765:1)
+    at ɵɵinject (node_modules/@angular/core/fesm2015/core.mjs:4769:1)
+    at Object.MuseumService_Factory [as factory] (ng:///MuseumService/ɵfac.js:4:41)
+    at R3Injector.hydrate (node_modules/@angular/core/fesm2015/core.mjs:11457:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11276:1)
+    at NgModuleRef.get (node_modules/@angular/core/fesm2015/core.mjs:21832:1)
+    at TestBedRender3.inject (node_modules/@angular/core/fesm2015/testing.mjs:1719:1)
+
+Error: Expected undefined to be truthy.
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (src/app/museum/museum.service.spec.ts:14:21)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
+</failure>
+    </testCase>
   </file>
 </testExecutions>
