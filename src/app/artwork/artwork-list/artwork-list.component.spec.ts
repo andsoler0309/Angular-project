@@ -11,6 +11,7 @@ import { faker } from '@faker-js/faker';
 import { Artist } from 'src/app/artist/artist';
 import { Image } from 'src/app/image/image';
 import { Movement } from 'src/app/movement/movement';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 describe('ArtworkListComponent', () => {
   let component: ArtworkListComponent;
@@ -19,7 +20,7 @@ describe('ArtworkListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      imports: [HttpClientModule, NgxPaginationModule],
       declarations: [ ArtworkListComponent ],
       providers: [ ArtworkService ]
     })
@@ -124,12 +125,12 @@ describe('ArtworkListComponent', () => {
     expect(component.artworks[0].artist.movements[0].description).toBeTruthy();
   });
 
-  it('should have 10 <div.card-body> elements', () => {
-    expect(debug.queryAll(By.css('div.card-body'))).toHaveSize(10);
+  it('should have 4 <div.card-body> elements', () => {
+    expect(debug.queryAll(By.css('div.card-body'))).toHaveSize(4);
   });
 
-  it('should have 10 <img> elements', () => {
-    expect(debug.queryAll(By.css('img'))).toHaveSize(10);
+  it('should have 4 <img> elements', () => {
+    expect(debug.queryAll(By.css('img'))).toHaveSize(4);
   });
 
   it('should have the corresponding src to the artwork image and alt to the artwork name', () => {
@@ -142,8 +143,8 @@ describe('ArtworkListComponent', () => {
     });
   });
 
-  it('should have 10 <h5.card-title> elements', () => {
-    expect(debug.queryAll(By.css('h5.card-title'))).toHaveSize(10);
+  it('should have 4 <h5.card-title> elements', () => {
+    expect(debug.queryAll(By.css('h5.card-title'))).toHaveSize(4);
   });
 
   it('should have the corresponding title to the artwork title', () => {
