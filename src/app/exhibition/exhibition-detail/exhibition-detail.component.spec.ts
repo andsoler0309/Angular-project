@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ExhibitionDetailComponent } from './exhibition-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ExhibitionDetailComponent', () => {
   let component: ExhibitionDetailComponent;
@@ -11,6 +12,7 @@ describe('ExhibitionDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ ExhibitionDetailComponent ]
     })
       .compileComponents();
