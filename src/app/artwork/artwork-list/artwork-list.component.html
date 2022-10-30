@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <h1>Artworks</h1>
       <div class="row text-center">
-        <div class="col-md-3" *ngFor="let artwork of artworks | paginate: { itemsPerPage: 4, currentPage: page }">
+        <div class="col-md-3" *ngFor="let artwork of artworks | paginate: { itemsPerPage: 4, currentPage: page, id: 'artworks'}">
           <div class="card p-2">
             <div class="card-top">
               <img
@@ -21,7 +21,7 @@
          </div>
         </div>
       </div>
-      <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"
+      <pagination-controls (pageChange)="page = $event" id="artworks" previousLabel="Anterior"
       nextLabel="Siguiente"
       screenReaderPaginationLabel="Paginación"
       screenReaderPageLabel="Página"
