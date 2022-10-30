@@ -9,6 +9,7 @@ import { ArtworkService } from '../artwork.service';
 })
 export class ArtworkListComponent implements OnInit {
   artworks: Array<Artwork> = [];
+  page = 1; // current page
 
   constructor(private artworkService: ArtworkService) { }
 
