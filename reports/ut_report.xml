@@ -1,8 +1,7 @@
 <testExecutions version="1">
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="36"/>
-    <testCase name="AppComponent should have as title 'museums-front'" duration="4"/>
-    <testCase name="AppComponent should render title" duration="34">
+    <testCase name="AppComponent should have as title 'museums-front'" duration="45"/>
+    <testCase name="AppComponent should render title" duration="36">
       <failure message="Error">Error: Expected undefined to contain 'museums-front app is running!'.
     at &lt;Jasmine&gt;
     at UserContext.&lt;anonymous&gt; (src/app/app.component.spec.ts:36:66)
@@ -10,31 +9,9 @@
     at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
 </failure>
     </testCase>
+    <testCase name="AppComponent should create the app" duration="5"/>
   </file>
   <file path="src/app/museum/museum.service.spec.ts">
-    <testCase name="MuseumService should be created" duration="4">
-      <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[MuseumService -&gt; HttpClient -&gt; HttpClient]: 
-  NullInjectorError: No provider for HttpClient!
-error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'MuseumService', 'HttpClient', 'HttpClient' ] })
-NullInjectorError: R3InjectorError(DynamicTestModule)[MuseumService -&gt; HttpClient -&gt; HttpClient]: 
-  NullInjectorError: No provider for HttpClient!
-    at NullInjector.get (node_modules/@angular/core/fesm2015/core.mjs:11120:1)
-    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
-    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
-    at injectInjectorOnly (node_modules/@angular/core/fesm2015/core.mjs:4765:1)
-    at ɵɵinject (node_modules/@angular/core/fesm2015/core.mjs:4769:1)
-    at Object.MuseumService_Factory [as factory] (ng:///MuseumService/ɵfac.js:4:41)
-    at R3Injector.hydrate (node_modules/@angular/core/fesm2015/core.mjs:11457:1)
-    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11276:1)
-    at NgModuleRef.get (node_modules/@angular/core/fesm2015/core.mjs:21832:1)
-    at TestBedRender3.inject (node_modules/@angular/core/fesm2015/testing.mjs:1719:1)
-
-Error: Expected undefined to be truthy.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/museum/museum.service.spec.ts:14:21)
-    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
-    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
-</failure>
-    </testCase>
+    <testCase name="MuseumService should ..." duration="1"/>
   </file>
 </testExecutions>
