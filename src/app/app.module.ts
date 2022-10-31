@@ -27,8 +27,8 @@ import { ExhibitionModule } from './exhibition/exhibition.module';
     ArtistModule,
     ArtworkModule,
     MovementModule,
-    ExhibitionModule
-  ],
+    ExhibitionModule,
+],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -5,11 +5,11 @@ import { DebugElement } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { faker } from '@faker-js/faker';
 
-
 import { ExhibitionListComponent } from './exhibition-list.component';
 import { Exhibition } from '../exhibition';
 import { Sponsor } from 'src/app/sponsor';
 import { ExhibitionService } from './exhibition.service';
+import { ExhibitionDetailComponent } from '../exhibition-detail/exhibition-detail.component';
 
 describe('ExhibitionListComponent', () => {
   let component: ExhibitionListComponent;
@@ -19,7 +19,7 @@ describe('ExhibitionListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
-      declarations: [ ExhibitionListComponent ]
+      declarations: [ ExhibitionListComponent, ExhibitionDetailComponent ]
     })
       .compileComponents();
   }));
@@ -51,7 +51,7 @@ describe('ExhibitionListComponent', () => {
   }));
 
   it('should have 10 <button> elements', () => {
-    expect(debug.queryAll(By.css('button'))).toHaveSize(10)
+    expect(debug.queryAll(By.css('button'))).toHaveSize(10);
   });
 
 });

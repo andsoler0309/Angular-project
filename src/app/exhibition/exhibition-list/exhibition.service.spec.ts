@@ -3,7 +3,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { ExhibitionService } from './exhibition.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ExhibitionListComponent } from './exhibition-list.component'
 
 describe('Service: Exhibition', () => {
   beforeEach(() => {

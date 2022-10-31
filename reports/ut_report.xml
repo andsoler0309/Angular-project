@@ -1,30 +1,34 @@
 <testExecutions version="1">
-  <file path="src/app/exhibition/exhibition-list/exhibition.service.spec.ts">
-    <testCase name="Service: Exhibition should ..." duration="13"/>
+  <file path="src/app/artwork/artwork-list/artwork-list.component.spec.ts">
+    <testCase name="ArtworkListComponent should get artowkrs from the service" duration="53"/>
+    <testCase name="ArtworkListComponent should call picnotload when the image fails to load" duration="14"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist movements description" duration="7"/>
+    <testCase name="ArtworkListComponent should have 4 &lt;div.card-body> elements" duration="7"/>
+    <testCase name="ArtworkListComponent should have a list of artworks" duration="7"/>
+    <testCase name="ArtworkListComponent should create" duration="6"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with image" duration="6"/>
+    <testCase name="ArtworkListComponent should have the corresponding src to the artwork image and alt to the artwork name" duration="11"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with title" duration="6"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist" duration="6"/>
+    <testCase name="ArtworkListComponent should have 4 &lt;img> elements" duration="6"/>
+    <testCase name="ArtworkListComponent should have the corresponding title to the artwork title" duration="6"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with image url" duration="5"/>
+    <testCase name="ArtworkListComponent should have 4 &lt;h5.card-title> elements" duration="5"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist birthdate" duration="5"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist name" duration="4"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist movements name" duration="5"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist movements" duration="4"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist country" duration="5"/>
   </file>
   <file path="src/app/museum/museum.service.spec.ts">
-    <testCase name="MuseumService should ..." duration="4"/>
+    <testCase name="MuseumService should ..." duration="1"/>
   </file>
-  <file path="src/app/artwork/artwork-list/artwork-list.component.spec.ts">
-    <testCase name="ArtworkListComponent should have 4 &lt;img> elements" duration="48"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist movements" duration="10"/>
-    <testCase name="ArtworkListComponent should create" duration="7"/>
-    <testCase name="ArtworkListComponent should call picnotload when the image fails to load" duration="10"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist movements name" duration="9"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with image" duration="6"/>
-    <testCase name="ArtworkListComponent should have a list of artworks" duration="7"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with title" duration="8"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist name" duration="12"/>
-    <testCase name="ArtworkListComponent should have 4 &lt;h5.card-title> elements" duration="13"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist birthdate" duration="15"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with image url" duration="11"/>
-    <testCase name="ArtworkListComponent should have the corresponding src to the artwork image and alt to the artwork name" duration="10"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist" duration="13"/>
-    <testCase name="ArtworkListComponent should have 4 &lt;div.card-body> elements" duration="14"/>
-    <testCase name="ArtworkListComponent should get artowkrs from the service" duration="18"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist movements description" duration="11"/>
-    <testCase name="ArtworkListComponent should have the corresponding title to the artwork title" duration="10"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist country" duration="10"/>
+  <file path="src/app/exhibition/exhibition-list/exhibition.service.spec.ts">
+    <testCase name="Service: Exhibition should ..." duration="1"/>
+  </file>
+  <file path="src/app/exhibition/exhibition-list/exhibition-list.component.spec.ts">
+    <testCase name="ExhibitionListComponent should have 10 &lt;button> elements" duration="12"/>
+    <testCase name="ExhibitionListComponent should ..." duration="3"/>
   </file>
   <file path="src/app/exhibition/exhibition-detail/exhibition-detail.component.spec.ts">
     <testCase name="ExhibitionDetailComponent should create" duration="1">
@@ -32,13 +36,9 @@
     </testCase>
   </file>
   <file path="src/app/artwork/artwork.service.spec.ts">
-    <testCase name="Service: Artwork should ..." duration="4"/>
-  </file>
-  <file path="src/app/exhibition/exhibition-list/exhibition-list.component.spec.ts">
-    <testCase name="ExhibitionListComponent should ..." duration="16"/>
-    <testCase name="ExhibitionListComponent should have 10 &lt;button> elements" duration="10"/>
+    <testCase name="Service: Artwork should ..." duration="1"/>
   </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="18"/>
+    <testCase name="AppComponent should create the app" duration="9"/>
   </file>
 </testExecutions>
