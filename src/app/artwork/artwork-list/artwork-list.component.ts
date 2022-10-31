@@ -10,6 +10,8 @@ import { ArtworkService } from '../artwork.service';
 export class ArtworkListComponent implements OnInit {
   artworks: Array<Artwork> = [];
   page = 1; // current page
+  selected = false;
+  selectedArtwork!: Artwork;
 
   constructor(private artworkService: ArtworkService) { }
 
@@ -43,6 +45,11 @@ export class ArtworkListComponent implements OnInit {
         eventTarget.width = artwork.images[1].width;
       }
     });
+  }
+
+  onSelected(artwork: Artwork): void {
+    this.selected = true;
+    this.selectedArtwork = artwork;
   }
 
 }

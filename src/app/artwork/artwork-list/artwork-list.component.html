@@ -12,6 +12,7 @@
               [attr.src]="artwork.images[0].source"
               (error)="pictNotLoading($event)"
               [style.--width]="artwork.images[0].width" [style.--height]="artwork.images[0].height"
+              (click)="onSelected(artwork)"
               />
             </div>
 
@@ -29,4 +30,9 @@
     </pagination-controls>
     </div>
   </div>
+</div>
+
+
+<div *ngIf="selected">
+  <app-artwork-detail [artworkDetail]="selectedArtwork"></app-artwork-detail>
 </div>
