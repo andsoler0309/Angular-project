@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Artwork } from '../artwork';
 import { ArtworkService } from '../artwork.service';
+import { Museum } from 'src/app/museum/museum';
 
 @Component({
   selector: 'app-artwork-list',
@@ -13,6 +14,8 @@ export class ArtworkListComponent implements OnInit {
   selected = false;
   selectedArtwork!: Artwork;
 
+  @Input() museum!: Museum;
+
   constructor(private artworkService: ArtworkService) { }
 
   getArtworks(): void {
@@ -21,8 +24,18 @@ export class ArtworkListComponent implements OnInit {
     });
   }
 
+  getMuseumsArtworks(): void {
+    this.artworkService.getMuseumsArtworks(this.museum.id).subscribe((artworks) => {
+      this.artworks = artworks;
+    });
+  }
+
   ngOnInit(): void {
-    this.getArtworks();
+    if(this.museum){
+      this.getMuseumsArtworks();
+    } else {
+      this.getArtworks();
+    }
   }
 
   pictNotLoading(event: ErrorEvent): void {
@@ -48,8 +61,11 @@ export class ArtworkListComponent implements OnInit {
   }
 
   onSelected(artwork: Artwork): void {
-    this.selected = true;
-    this.selectedArtwork = artwork;
+    if (this.selected === true && this.selectedArtwork === artwork) {
+      this.selected = false;
+    } else {
+      this.selected = true;
+      this.selectedArtwork = artwork;
+    }
   }
-
 }

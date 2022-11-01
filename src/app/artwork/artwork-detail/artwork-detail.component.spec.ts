@@ -88,4 +88,9 @@ describe('ArtworkDetailComponent', () => {
     const image = debug.query(By.css('img')).nativeElement;
     expect(image.src).toContain(component.artworkDetail.images[0].source);
   });
+
+  it('should display the artwork artist', () => {
+    const artist = debug.query(By.css('.card-text-light')).nativeElement;
+    expect(artist.textContent).toContain(component.artworkDetail.artist.name);
+  });
 });
