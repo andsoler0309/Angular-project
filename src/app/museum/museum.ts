@@ -6,9 +6,9 @@ export class Museum {
   description: string;
   address: string;
   city: string;
-  image: Image[];
+  image: Image;
 
-  constructor(id: number, name: string, description: string, address: string, city: string, image: Image[]) {
+  constructor(id: number, name: string, description: string, address: string, city: string, image: Image) {
     this.id = id;
     this.name = name;
     this.description = description;

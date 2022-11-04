@@ -26,32 +26,32 @@ export class MuseumListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.museum){
+    if(!this.museum){
       this.getMuseums();
     }
   }
 
-  pictNotLoading(event: ErrorEvent): void {
-    const eventTarget = event.target as HTMLImageElement; // cast to HTMLImageElement to access src property
+  // pictNotLoading(event: ErrorEvent): void {
+  //   const eventTarget = event.target as HTMLImageElement; // cast to HTMLImageElement to access src property
 
-    const actualSource = eventTarget.src;
+  //   const actualSource = eventTarget.src;
 
-    this.museums.forEach((museum) => {
-      let flag = 0;
-      museum.image.forEach((image) => {
-        if (image.source === actualSource) {
-          flag = 1;
-        }
-      });
+  //   this.museums.forEach((museum) => {
+  //     let flag = 0;
+  //     museum.image.forEach((image) => {
+  //       if (image.source === actualSource) {
+  //         flag = 1;
+  //       }
+  //     });
 
-      if (flag === 1) {
-        eventTarget.src = museum.image[1].source;
-        eventTarget.alt = museum.image[1].altText;
-        eventTarget.height = museum.image[1].height;
-        eventTarget.width = museum.image[1].width;
-      }
-    });
-  }
+  //     if (flag === 1) {
+  //       eventTarget.src = museum.image[1].source;
+  //       eventTarget.alt = museum.image[1].altText;
+  //       eventTarget.height = museum.image[1].height;
+  //       eventTarget.width = museum.image[1].width;
+  //     }
+  //   });
+  // }
 
   onSelected(museum: Museum): void {
     if (this.selected === true && this.selectedMuseum === this.museum) {

@@ -8,10 +8,9 @@
             <div class="card-top">
               <img
               class="card-img-center"
-              alt="{{ museum.image[0].altText }}"
-              [attr.src]="museum.image[0].source"
-              (error)="pictNotLoading($event)"
-              [style.--width]="museum.image[0].width" [style.--height]="museum.image[0].height"
+              alt="{{ museum.image.altText }}"
+              [attr.src]="museum.image.source"
+              [style.--width]="museum.image.width" [style.--height]="museum.image.height"
               />
             </div>
 

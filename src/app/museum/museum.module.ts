@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MuseumListComponent } from './museum-list/museum-list.component';
+import { MuseumDetailComponent } from './museum-detail/museum-detail.component';
 
 
 
@@ -11,8 +12,9 @@ import { MuseumListComponent } from './museum-list/museum-list.component';
     NgxPaginationModule
   ],
   declarations: [
-    MuseumListComponent
+    MuseumListComponent,
+    MuseumDetailComponent
   ],
-  exports: [MuseumListComponent]
+  exports: [MuseumListComponent, MuseumDetailComponent]
 })
 export class MuseumModule { }

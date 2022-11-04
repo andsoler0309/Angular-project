@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
-import { MuseumDetail } from './museum-detail';
+import { Museum } from './museum';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,8 @@ export class MuseumService {
 
   constructor(private http: HttpClient) { }
 
-  getMuseums(): Observable<MuseumDetail[]> {
-    return this.http.get<MuseumDetail[]>(this.apiUrl);
+  getMuseums(): Observable<Museum[]> {
+    return this.http.get<Museum[]>(this.apiUrl);
 
   }
 }

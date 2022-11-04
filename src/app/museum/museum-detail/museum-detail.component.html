@@ -7,10 +7,9 @@
             <div class="image__container">
               <img
                 class="card-img-center"
-                alt="{{ museumDetail.image[0].altText }}"
-                [attr.src]="museumDetail.image[0].source"
-                (error)="pictNotLoadingDetail($event)"
-                [style.--width]="museumDetail.image[0].width" [style.--height]="museumDetail.image[0].height"
+                alt="{{ museumDetail.image.altText }}"
+                [attr.src]="museumDetail.image.source"
+                [style.--width]="museumDetail.image.width" [style.--height]="museumDetail.image.height"
               />
             </div>
 
