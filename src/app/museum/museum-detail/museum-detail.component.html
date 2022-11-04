@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="detail_box__container">
+          <div class="detail_box">
+            <div class="image__container">
+              <img
+                class="card-img-center"
+                alt="{{ museumDetail.image[0].altText }}"
+                [attr.src]="museumDetail.image[0].source"
+                (error)="pictNotLoadingDetail($event)"
+                [style.--width]="museumDetail.image[0].width" [style.--height]="museumDetail.image[0].height"
+              />
+            </div>
+
+            <div class="data__container">
+              <h1 class="card-title">{{ museumDetail.name }}</h1>
+              <p class="card-text">{{ museumDetail.description }}</p>
+              <p class="card-text">{{ museumDetail.city }}</p>
+              <p class="card-text">{{ museumDetail.address }}</p>
+            </div>
+
+          </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
