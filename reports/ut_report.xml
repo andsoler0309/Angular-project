@@ -1,4 +1,10 @@
 <testExecutions version="1">
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="57"/>
+  </file>
+  <file path="src/app/museum/museum-detail/museum-detail.component.spec.ts">
+    <testCase name="MuseumDetailComponent should create" duration="14"/>
+  </file>
   <file path="src/app/exhibition/exhibition-list/exhibition-list.component.spec.ts">
     <testCase name="ExhibitionListComponent should ..." duration="139"/>
     <testCase name="ExhibitionListComponent should have 10 &lt;button> elements" duration="23"/>
@@ -7,6 +13,7 @@
     <testCase name="Service: Exhibition should ..." duration="5"/>
   </file>
   <file path="src/app/museum/museum.service.spec.ts">
+    <testCase name="MuseumService should ..." duration="2"/>
     <testCase name="MuseumService should ..." duration="1"/>
   </file>
   <file path="src/app/artwork/artwork-detail/artwork-detail.component.spec.ts">

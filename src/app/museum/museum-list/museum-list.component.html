@@ -1,11 +1,10 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <h1>Lista de Museos</h1>
+      <h1>Listado de Museos</h1>
       <div class="row text-center">
-        <!---->
-        <div class="col-md-3" *ngFor="let museum of museums | paginate: { itemsPerPage: 2, currentPage: p }">
-          <div class="card p-2">
+        <div class="col-md-3" *ngFor="let museum of museums | paginate: { itemsPerPage: 2, currentPage: p, id: 'museums'}">
+          <div class="card p-2" (click)="onSelected(museum)" >
             <div class="card-top">
               <img
               class="card-img-center"
@@ -14,13 +13,14 @@
               [style.--width]="museum.image.width" [style.--height]="museum.image.height"
               />
             </div>
+
             <div class="card-body">
               <h5 class="card-title">{{ museum.name }}</h5>
             </div>
          </div>
         </div>
       </div>
-      <pagination-controls (pageChange)="p = $event" previousLabel="Anterior"
+      <pagination-controls (pageChange)="p= $event" id="museums" previousLabel="Anterior"
       nextLabel="Siguiente"
       screenReaderPaginationLabel="Paginación"
       screenReaderPageLabel="Página"
@@ -28,4 +28,9 @@
     </pagination-controls>
     </div>
   </div>
+</div>
+
+
+<div *ngIf="selected == true">
+  <app-museum-detail [museumDetail]="selectedMuseum"></app-museum-detail>
 </div>

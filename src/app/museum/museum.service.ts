@@ -9,11 +9,14 @@ import { Museum } from './museum';
   providedIn: 'root'
 })
 export class MuseumService {
+
   private apiUrl: string = environment.baseUrl + 'museums';
+
   constructor(private http: HttpClient) { }
 
   getMuseums(): Observable<Museum[]> {
     return this.http.get<Museum[]>(this.apiUrl);
+
   }
 }
 

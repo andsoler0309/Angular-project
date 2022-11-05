@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Museum } from '../museum';
 import { MuseumService } from '../museum.service';
 
@@ -7,11 +7,15 @@ import { MuseumService } from '../museum.service';
   templateUrl: './museum-list.component.html',
   styleUrls: ['./museum-list.component.css']
 })
+
 export class MuseumListComponent implements OnInit {
 
-  p: number = 1;
-
   museums: Array<Museum> = [];
+  p = 1;
+  selected: Boolean = false;
+  selectedMuseum!: Museum;
+
+  @Input() museum!: Museum;
 
   constructor(private museumService: MuseumService) { }
 
@@ -22,7 +26,18 @@ export class MuseumListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getMuseums();
+    if(!this.museum){
+      this.getMuseums();
+    }
+  }
+
+  onSelected(museum: Museum): void {
+    if (this.selected === true && this.selectedMuseum === this.museum) {
+      this.selected = false;
+    } else {
+      this.selected = true;
+      this.selectedMuseum = museum;
+    }
   }
 
 }
