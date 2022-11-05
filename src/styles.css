@@ -14,3 +14,11 @@ color: white !important;
 .active{
   color: red!important
 }
+
+pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

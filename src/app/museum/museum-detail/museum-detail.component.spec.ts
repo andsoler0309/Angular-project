@@ -4,7 +4,6 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { MuseumDetailComponent } from './museum-detail.component';
-import { Museum } from '../museum';
 
 describe('MuseumDetailComponent', () => {
   let component: MuseumDetailComponent;

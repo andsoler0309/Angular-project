@@ -2,10 +2,10 @@
   <div class="row">
     <div class="col-md-12">
 
-      <div class="detail_box__container">
+      <div class="detail_box__container" *ngIf="museumDetail">
           <div class="detail_box">
             <div class="image__container">
-              <img
+              <img *ngIf="museumDetail.image"
                 class="card-img-center"
                 alt="{{ museumDetail.image.altText }}"
                 [attr.src]="museumDetail.image.source"

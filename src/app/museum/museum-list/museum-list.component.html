@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <h1>Museums</h1>
+      <h1>Listado de Museos</h1>
       <div class="row text-center">
-        <div class="col-md-3" *ngFor="let museum of museums | paginate: { itemsPerPage: 4, currentPage: p, id: 'museums'}">
+        <div class="col-md-3" *ngFor="let museum of museums | paginate: { itemsPerPage: 2, currentPage: p, id: 'museums'}">
           <div class="card p-2" (click)="onSelected(museum)" >
             <div class="card-top">
               <img
