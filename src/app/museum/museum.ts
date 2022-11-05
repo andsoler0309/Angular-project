@@ -1,3 +1,4 @@
+import { Image } from "../image/image";
 
 export class Museum {
   id: number;
@@ -5,9 +6,9 @@ export class Museum {
   description: string;
   address: string;
   city: string;
-  image: any;
+  image: Image;
 
-  constructor(id: number, name: string, description: string, address: string, city: string, image: any) {
+  constructor(id: number, name: string, description: string, address: string, city: string, image: Image) {
     this.id = id;
     this.name = name;
     this.description = description;
