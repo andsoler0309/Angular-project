@@ -24,7 +24,6 @@ describe('ExhibitionDetailComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ExhibitionDetailComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
 
     component.name = faker.name.fullName();
     component.description = faker.lorem.sentence();
@@ -32,6 +31,7 @@ describe('ExhibitionDetailComponent', () => {
     component.sponsorDescription = faker.lorem.sentence();
     component.sponsorWebsite = faker.internet.domainName();
     debug = fixture.debugElement;
+    fixture.detectChanges();
   });
 
   it('should create', () => {
@@ -39,11 +39,11 @@ describe('ExhibitionDetailComponent', () => {
   });
 
   it('should have 1 <card> element', () => {
-    expect(debug.queryAll(By.css('card'))).toHaveSize(1);
+    expect(debug.queryAll(By.css('div.card'))).toHaveSize(1);
   });
 
   it('should have 1 <h5> element', () => {
-    expect(debug.queryAll(By.css('h5'))).toHaveSize(3);
+    expect(debug.queryAll(By.css('h5'))).toHaveSize(1);
   });
 
   it('should have 1 <p> element', () => {
