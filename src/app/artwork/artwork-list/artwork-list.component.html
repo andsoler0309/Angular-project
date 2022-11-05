@@ -4,7 +4,7 @@
       <h1>Artworks</h1>
       <div class="row text-center">
         <div class="col-md-3" *ngFor="let artwork of artworks | paginate: { itemsPerPage: 4, currentPage: page, id: 'artworks'}">
-          <div class="card p-2">
+          <div class="card p-2" (click)="onSelected(artwork)" >
             <div class="card-top">
               <img
               class="card-img-center"
@@ -30,3 +30,10 @@
     </div>
   </div>
 </div>
+
+
+<div *ngIf="selected == true">
+  <app-artwork-detail [artworkDetail]="selectedArtwork"></app-artwork-detail>
+</div>
+
+

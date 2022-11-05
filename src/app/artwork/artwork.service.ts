@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Artwork } from './artwork';
-import { ExhibitionModule } from '../exhibition/exhibition.module';
+import { ArtworkDetail } from './artwork-detail';
 
 
 
@@ -19,4 +19,11 @@ export class ArtworkService {
     return this.http.get<Artwork[]>(this.apiUrl);
   }
 
+  getArtworkDetail(artworkId: number): Observable<ArtworkDetail> {
+    return this.http.get<ArtworkDetail>(this.apiUrl + '/' + artworkId);
+  }
+
+  getMuseumsArtworks(museumId: number): Observable<Artwork[]> {
+    return this.http.get<Artwork[]>(environment.baseUrl + 'museums/' + museumId + '/artworks');
+  }
 }

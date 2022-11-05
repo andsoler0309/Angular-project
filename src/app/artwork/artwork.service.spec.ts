@@ -17,4 +17,15 @@ describe('Service: Artwork', () => {
     expect(service).toBeTruthy();
   }));
 
+  it('should getArtworks', inject([ArtworkService], (service: ArtworkService) => {
+    expect(service.getArtworks()).toBeTruthy();
+  }));
+
+  it('should getArtworkDetail', inject([ArtworkService], (service: ArtworkService) => {
+    expect(service.getArtworkDetail(1)).toBeTruthy();
+  }));
+
+  it('should getMuseumsArtworks', inject([ArtworkService], (service: ArtworkService) => {
+    expect(service.getMuseumsArtworks(1)).toBeTruthy();
+  }));
 });

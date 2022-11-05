@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="detail_box__container">
+          <div class="detail_box">
+            <div class="image__container">
+              <img
+                class="card-img-center"
+                alt="{{ artworkDetail.images[0].altText }}"
+                [attr.src]="artworkDetail.images[0].source"
+                (error)="pictNotLoadingDetail($event)"
+                [style.--width]="artworkDetail.images[0].width" [style.--height]="artworkDetail.images[0].height"
+              />
+            </div>
+
+            <div class="data__container">
+              <h1 class="card-title">{{ artworkDetail.name }}</h1>
+              <p class="card-text">{{ artworkDetail.description }}</p>
+              <p class="card-text-light">Author: {{ artworkDetail.artist.name }}</p>
+              <p class="card-text-light">Year: {{ artworkDetail.year }}</p>
+            </div>
+
+          </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
