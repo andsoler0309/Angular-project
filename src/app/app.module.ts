@@ -10,7 +10,8 @@ import { ArtistModule } from './artist/artist.module';
 import { ArtworkModule } from './artwork/artwork.module';
 import { MovementModule } from './movement/movement.module';
 import { ExhibitionModule } from './exhibition/exhibition.module';
-
+import { ArtworkRoutingModule } from './artwork/artwork-routing.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { ExhibitionModule } from './exhibition/exhibition.module';
     ArtworkModule,
     MovementModule,
     ExhibitionModule,
-],
+    ArtworkRoutingModule,
+    RouterModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

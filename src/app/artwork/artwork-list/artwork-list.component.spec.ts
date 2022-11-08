@@ -143,8 +143,8 @@ describe('ArtworkListComponent', () => {
     });
   });
 
-  it('should have 4 <h5.card-title> elements', () => {
-    expect(debug.queryAll(By.css('h5.card-title'))).toHaveSize(4);
+  it('should have 4 <h2.card-title> elements', () => {
+    expect(debug.queryAll(By.css('h2.card-title'))).toHaveSize(4);
   });
 
   it('should have the corresponding title to the artwork title', () => {

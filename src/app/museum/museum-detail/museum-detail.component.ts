@@ -9,7 +9,13 @@ import { Museum } from '../museum';
 export class MuseumDetailComponent implements OnInit {
 
   @Input() museumDetail!: Museum;
+  selectedArtworksButton = false;
+  selectedMuseum!: Museum;
 
+  @Input() museum!: Museum;
+
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() { }
 
   ngOnInit() {
@@ -20,4 +26,7 @@ export class MuseumDetailComponent implements OnInit {
     window.scroll(0, document.body.scrollHeight);
   }
 
+  getArworksList(museum: Museum): void {
+    this.selectedMuseum = museum;
+  }
 }

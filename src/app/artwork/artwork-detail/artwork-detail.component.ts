@@ -15,11 +15,6 @@ export class ArtworkDetailComponent implements OnInit {
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   ngOnInit() {
-    this.scrollBottom();
-  }
-
-  scrollBottom(): void {
-    window.scroll(0, document.body.scrollHeight);
   }
 
   pictNotLoadingDetail(event: ErrorEvent) : void {

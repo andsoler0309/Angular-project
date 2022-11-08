@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MuseumListComponent } from './museum-list/museum-list.component';
 import { MuseumDetailComponent } from './museum-detail/museum-detail.component';
+import { ArtworkModule } from '../artwork/artwork.module';
 
 
 
 @NgModule({
   imports: [
     CommonModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ArtworkModule,
   ],
   declarations: [
     MuseumListComponent,

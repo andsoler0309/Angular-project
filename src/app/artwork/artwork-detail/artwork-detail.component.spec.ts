@@ -90,7 +90,7 @@ describe('ArtworkDetailComponent', () => {
   });
 
   it('should display the artwork artist', () => {
-    const artist = debug.query(By.css('.card-text-light')).nativeElement;
+    const artist = debug.query(By.css('[class=\'card-text-light\']:last-of-type')).nativeElement;
     expect(artist.textContent).toContain(component.artworkDetail.artist.name);
   });
 });

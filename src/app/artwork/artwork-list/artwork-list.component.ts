@@ -9,8 +9,9 @@ import { Museum } from 'src/app/museum/museum';
   styleUrls: ['./artwork-list.component.css']
 })
 export class ArtworkListComponent implements OnInit {
+
   artworks: Array<Artwork> = [];
-  page = 1; // current page
+  page = 1;
   selected = false;
   selectedArtwork!: Artwork;
 
