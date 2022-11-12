@@ -34,9 +34,14 @@ export class ArtworkListComponent implements OnInit {
   ngOnInit(): void {
     if(this.museum){
       this.getMuseumsArtworks();
+      this.scrollBottom();
     } else {
       this.getArtworks();
     }
+  }
+
+  scrollBottom(): void {
+    window.scroll(0, document.body.scrollHeight);
   }
 
   pictNotLoading(event: ErrorEvent): void {
