@@ -52,6 +52,13 @@ describe('ArtworkDetailComponent', () => {
         faker.lorem.word(),
         faker.datatype.number(),
         faker.datatype.number()
+      ),
+      new Image(
+        faker.datatype.number(),
+        faker.image.imageUrl(),
+        faker.lorem.word(),
+        faker.datatype.number(),
+        faker.datatype.number()
       )
     ];
 
@@ -92,5 +99,24 @@ describe('ArtworkDetailComponent', () => {
   it('should display the artwork artist', () => {
     const artist = debug.query(By.css('[class=\'card-text-light\']:last-of-type')).nativeElement;
     expect(artist.textContent).toContain(component.artworkDetail.artist.name);
+  });
+
+  it('should use pictNotLoadingDetail() when the image is not loading', () => {
+    const image = debug.query(By.css('img')).nativeElement;
+    spyOn(component, 'pictNotLoadingDetail');
+    image.dispatchEvent(new Event('error'));
+    expect(component.pictNotLoadingDetail).toHaveBeenCalled();
+  });
+
+  it('should use scrollBottom() when the component is initialized', () => {
+    spyOn(component, 'scrollBottom');
+    component.ngOnInit();
+    expect(component.scrollBottom).toHaveBeenCalled();
+  });
+
+  it('if pic doesnt load, should display the second image', () => {
+    const image = debug.query(By.css('img')).nativeElement;
+    image.dispatchEvent(new Event('error'));
+    expect(image.src).toContain(component.artworkDetail.images[1].source);
   });
 });

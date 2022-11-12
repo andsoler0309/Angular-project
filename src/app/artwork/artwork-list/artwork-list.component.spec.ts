@@ -12,6 +12,7 @@ import { Artist } from 'src/app/artist/artist';
 import { Image } from 'src/app/image/image';
 import { Movement } from 'src/app/movement/movement';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { Museum } from 'src/app/museum/museum';
 
 describe('ArtworkListComponent', () => {
   let component: ArtworkListComponent;
@@ -55,6 +56,13 @@ describe('ArtworkListComponent', () => {
         faker.lorem.word(),
         faker.datatype.number(),
         faker.datatype.number()
+      ),
+      new Image(
+        faker.datatype.number(),
+        faker.image.imageUrl(),
+        faker.lorem.word(),
+        faker.datatype.number(),
+        faker.datatype.number()
       )
     ];
 
@@ -70,6 +78,9 @@ describe('ArtworkListComponent', () => {
       );
       component.artworks.push(artwork);
     }
+
+    const badImageSource = 'https://media.tate.org.uk/aztate-prd-ew-dg-wgtail-st1-ctr-data/images/.width-1200_LwsaUXy.jpg';
+    component.artworks[0].images[0].source = badImageSource;
 
     fixture.detectChanges();
     debug = fixture.debugElement;
@@ -147,12 +158,6 @@ describe('ArtworkListComponent', () => {
     expect(debug.queryAll(By.css('h2.card-title'))).toHaveSize(4);
   });
 
-  it('should have the corresponding title to the artwork title', () => {
-    debug.queryAll(By.css('h5.card-title')).forEach((title, i)=>{
-      expect(title.nativeElement.textContent).toEqual(
-        component.artworks[i].name);
-    });
-  });
 
   it('should get artowkrs from the service', () => {
     const service = TestBed.inject(ArtworkService);
@@ -161,10 +166,54 @@ describe('ArtworkListComponent', () => {
     expect(service.getArtworks).toHaveBeenCalled();
   });
 
-  it ('should call picnotload when the image fails to load', () => {
-    spyOn(component, 'pictNotLoading');
-    const img = debug.query(By.css('img'));
-    img.triggerEventHandler('error', null);
-    expect(component.pictNotLoading).toHaveBeenCalled();
+
+  it('if pic doesnt load, should display the second image', () => {
+    const image = debug.query(By.css('img')).nativeElement;
+    image.dispatchEvent(new Event('error'));
+    expect(image.src).toContain(component.artworks[0].images[1].source);
+  });
+
+  it('should call service to get artworks', () => {
+    const service = TestBed.inject(ArtworkService);
+    spyOn(service, 'getArtworks').and.callThrough();
+    component.ngOnInit();
+    expect(service.getArtworks).toHaveBeenCalled();
+  });
+
+  it('should get museum artworks if input is museum', () => {
+    const image = new Image(
+      faker.datatype.number(),
+      faker.image.imageUrl(),
+      faker.lorem.word(),
+      faker.datatype.number(),
+      faker.datatype.number()
+    );
+
+    const museum = new Museum(
+      faker.datatype.number(),
+      faker.name.firstName(),
+      faker.random.words(),
+      faker.address.streetAddress(),
+      faker.address.city(),
+      image,
+    );
+    const service = TestBed.inject(ArtworkService);
+    spyOn(service, 'getMuseumsArtworks').and.callThrough();
+    component.museum = museum;
+    component.ngOnInit();
+    expect(service.getMuseumsArtworks).toHaveBeenCalled();
+  });
+
+  it('should selected change when clicked', () => {
+    const div = debug.query(By.css('div.card.p-2'));
+    div.triggerEventHandler('click', null);
+    expect(component.selected).toBeTruthy();
+  });
+
+  it('should selected change when clicked twice', () => {
+    const div = debug.query(By.css('div.card.p-2'));
+    div.triggerEventHandler('click', null);
+    div.triggerEventHandler('click', null);
+    expect(component.selected).toBeFalsy();
   });
 });
