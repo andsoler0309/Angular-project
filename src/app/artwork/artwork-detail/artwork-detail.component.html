@@ -4,7 +4,7 @@
 
       <div class="detail_box__container">
           <div class="detail_box">
-            <div class="image__container">
+            <div class="image__container" *ngIf="artworkDetail.images !== undefined">
               <img
                 class="card-img-center"
                 alt="{{ artworkDetail.images[0].altText }}"
@@ -17,8 +17,12 @@
             <div class="data__container">
               <h1 class="card-title">{{ artworkDetail.name }}</h1>
               <p class="card-text">{{ artworkDetail.description }}</p>
-              <p class="card-text-light">Author: {{ artworkDetail.artist.name }}</p>
               <p class="card-text-light">Year: {{ artworkDetail.year }}</p>
+              <ng-container *ngIf="artworkDetail.artist !== undefined">
+                <p class="card-text-light">Author: {{ artworkDetail.artist.name }}</p>
+              </ng-container>
+
+
             </div>
 
           </div>

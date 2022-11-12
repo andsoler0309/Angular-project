@@ -43,9 +43,29 @@
     <testCase name="Service: Artwork should getArtworkDetail" duration="1"/>
     <testCase name="Service: Artwork should getArtworks" duration="1"/>
     <testCase name="Service: Artwork should ..." duration="1"/>
+    <testCase name="Service: Artwork should getArtworkDetail" duration="1"/>
+    <testCase name="Service: Artwork should getArtworks" duration="1"/>
+    <testCase name="Service: Artwork should getMuseumsArtworks" duration="1"/>
   </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="12"/>
+  <file path="src/app/artwork/artwork-detail/artwork-detail.component.spec.ts">
+    <testCase name="ArtworkDetailComponent should display the artwork artist" duration="4"/>
+    <testCase name="ArtworkDetailComponent should use pictNotLoadingDetail() when the image is not loading" duration="2"/>
+    <testCase name="ArtworkDetailComponent should use scrollBottom() when the component is initialized" duration="1"/>
+    <testCase name="ArtworkDetailComponent if pic doesnt load, should display the second image" duration="1"/>
+    <testCase name="ArtworkDetailComponent should display the artwork title" duration="2"/>
+    <testCase name="ArtworkDetailComponent should display the artwork description" duration="1"/>
+    <testCase name="ArtworkDetailComponent should display the artwork image" duration="2"/>
+    <testCase name="ArtworkDetailComponent should create" duration="1"/>
+  </file>
+  <file path="src/app/museum/museum.service.spec.ts">
+    <testCase name="MuseumService should ..." duration="1"/>
+  </file>
+  <file path="src/app/exhibition/exhibition-list/exhibition-list.component.spec.ts">
+    <testCase name="ExhibitionListComponent should ..." duration="2"/>
+    <testCase name="ExhibitionListComponent should have 10 &lt;button> elements" duration="2"/>
+  </file>
+  <file path="src/app/museum/museum-detail/museum-detail.component.spec.ts">
+    <testCase name="MuseumDetailComponent should create" duration="3"/>
   </file>
   <file path="src/app/artwork/artwork-detail/artwork-detail.component.spec.ts">
     <testCase name="ArtworkDetailComponent should display the artwork description" duration="9"/>

@@ -1,3 +1,15 @@
 * [lang^=en] {
   color: green;
 }
+
+.btn {
+  color: #57fd7e;
+  background-color: black;
+  border-color: #57fd7e;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}

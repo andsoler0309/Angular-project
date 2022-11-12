@@ -9,8 +9,9 @@ import { Museum } from 'src/app/museum/museum';
   styleUrls: ['./artwork-list.component.css']
 })
 export class ArtworkListComponent implements OnInit {
+
   artworks: Array<Artwork> = [];
-  page = 1; // current page
+  page = 1;
   selected = false;
   selectedArtwork!: Artwork;
 
@@ -33,9 +34,14 @@ export class ArtworkListComponent implements OnInit {
   ngOnInit(): void {
     if(this.museum){
       this.getMuseumsArtworks();
+      this.scrollBottom();
     } else {
       this.getArtworks();
     }
+  }
+
+  scrollBottom(): void {
+    window.scroll(0, document.body.scrollHeight);
   }
 
   pictNotLoading(event: ErrorEvent): void {
