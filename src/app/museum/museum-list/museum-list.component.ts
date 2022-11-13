@@ -14,6 +14,7 @@ export class MuseumListComponent implements OnInit {
   p = 1;
   selected: Boolean = false;
   selectedMuseum!: Museum;
+  selectedNewMuseum = false;
 
   @Input() museum!: Museum;
 

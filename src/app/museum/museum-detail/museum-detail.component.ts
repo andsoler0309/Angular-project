@@ -12,7 +12,6 @@ export class MuseumDetailComponent implements OnInit {
   selectedArtworksButton = false;
   selectedMuseum!: Museum;
   @Input() selectedExhibitionsButton = false;
-
   @Input() museum!: Museum;
 
 

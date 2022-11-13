@@ -18,6 +18,7 @@ export class ExhibitionListComponent implements OnInit {
   currentSponsorDescription: string = '';
   currentSponsorWebsite: string = '';
   @Input() currentMuseumId: number = 102;
+  selected:boolean = false;
 
   constructor(private exhibitionService: ExhibitionService) { }
 
@@ -39,6 +40,10 @@ export class ExhibitionListComponent implements OnInit {
         this.currentSponsorName = ex.sponsor.name;
         this.currentSponsorDescription = ex.sponsor.description;
         this.currentSponsorWebsite = ex.sponsor.website;
+        this.selected = true;
+      }
+      else{
+        this.selected = false;
       }
     }
   }
