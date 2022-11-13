@@ -29,5 +29,12 @@ export class MuseumDetailComponent implements OnInit {
 
   getArworksList(museum: Museum): void {
     this.selectedMuseum = museum;
+    this.selectedArtworksButton = true;
   }
+
+  getExhibitionsList(museum: Museum): void {
+    this.selectedMuseum = museum;
+    this.selectedExhibitionsButton = true;
+  }
+
 }

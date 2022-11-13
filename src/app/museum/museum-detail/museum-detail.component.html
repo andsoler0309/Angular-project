@@ -19,7 +19,7 @@
               <p class="card-text">{{ museumDetail.city }}</p>
               <p class="card-text">{{ museumDetail.address }}</p>
               <div class="d-flex justify-content-around" >
-                <p href="#" class="btn btn-primary" (click)="selectedExhibitionsButton = true">Exhibiciones</p>
+                <p href="#" class="btn btn-primary" (click)="getExhibitionsList(museumDetail)">Exhibiciones</p>
                 <p href="#" class="btn btn-primary" (click)="getArworksList(museumDetail)">Obras de arte</p>
               </div>
 
@@ -44,7 +44,8 @@
   <app-exhibition-list [currentMuseumId] = "selectedMuseum.id"></app-exhibition-list>
 </div>
 
-<div *ngIf="selectedMuseum !== undefined && selectedMuseum === museumDetail">
+
+<div *ngIf="selectedMuseum !== undefined && selectedMuseum === museumDetail && selectedArtworksButton">
   <app-artwork-list [museum]="museumDetail"></app-artwork-list>
 </div>
 
