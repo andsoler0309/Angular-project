@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Exhibition } from '../exhibition';
 import { ExhibitionService } from './exhibition.service';
 import { Observable } from 'rxjs';
@@ -17,11 +17,12 @@ export class ExhibitionListComponent implements OnInit {
   currentSponsorName: string = '';
   currentSponsorDescription: string = '';
   currentSponsorWebsite: string = '';
+  @Input() currentMuseumId: number = 102;
 
   constructor(private exhibitionService: ExhibitionService) { }
 
   getExhibitions(): void {
-    this.exhibitionService.getExhibitions().subscribe((exhibitions) => {
+    this.exhibitionService.getExhibitions(this.currentMuseumId).subscribe((exhibitions) => {
       this.exhibitions = exhibitions;
     });
   }
