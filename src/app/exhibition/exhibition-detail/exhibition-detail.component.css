@@ -12,6 +12,11 @@
 }
 
 #sponsorName {
-  color: #1CA5B8;
+  color: #237985;
   font-weight: bold;
+}
+
+.btn-dark{
+  background-color: #237985;
+  color: white;
 }

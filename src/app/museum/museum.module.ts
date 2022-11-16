@@ -4,6 +4,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { MuseumListComponent } from './museum-list/museum-list.component';
 import { MuseumDetailComponent } from './museum-detail/museum-detail.component';
 import { ArtworkModule } from '../artwork/artwork.module';
+import { ExhibitionModule } from '../exhibition/exhibition.module';
 
 
 
@@ -12,6 +13,7 @@ import { ArtworkModule } from '../artwork/artwork.module';
     CommonModule,
     NgxPaginationModule,
     ArtworkModule,
+    ExhibitionModule
   ],
   declarations: [
     MuseumListComponent,

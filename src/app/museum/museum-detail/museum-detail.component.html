@@ -14,12 +14,12 @@
             </div>
 
             <div class="data__container">
-              <h1 class="card-title">{{ museumDetail.name }}</h1>
+              <h2 class="card-title">{{ museumDetail.name }}</h2>
               <p class="card-text">{{ museumDetail.description }}</p>
               <p class="card-text">{{ museumDetail.city }}</p>
               <p class="card-text">{{ museumDetail.address }}</p>
               <div class="d-flex justify-content-around" >
-                <p href="#" class="btn btn-primary">Exhibiciones</p>
+                <p href="#" class="btn btn-primary" (click)="getExhibitionsList(museumDetail)">Exhibiciones</p>
                 <p href="#" class="btn btn-primary" (click)="getArworksList(museumDetail)">Obras de arte</p>
               </div>
 
@@ -35,12 +35,12 @@
 
 </div>
 
+<div *ngIf="selectedExhibitionsButton == true && selectedMuseum !== undefined && selectedMuseum === museumDetail">
+  <app-exhibition-list [currentMuseumId] = "selectedMuseum.id"></app-exhibition-list>
+</div>
 
-<!-- <div *ngIf="selectedArtworksButton == true">
-    <app-artwork-list [museum]="museumDetail"></app-artwork-list>
-</div> -->
 
-<div *ngIf="selectedMuseum !== undefined && selectedMuseum === museumDetail">
+<div *ngIf="selectedMuseum !== undefined && selectedMuseum === museumDetail && selectedArtworksButton">
   <app-artwork-list [museum]="museumDetail"></app-artwork-list>
 </div>
 

@@ -1,3 +1,4 @@
+import { By } from '@angular/platform-browser';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -26,4 +27,17 @@ describe('MuseumListComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
+
+  it('should create', () => {
+    expect(component.museums).toBeTruthy();
+  });
+
+  it('should call service to get museums', () => {
+    const service = TestBed.inject(MuseumService);
+    spyOn(service, 'getMuseums').and.callThrough();
+    component.ngOnInit();
+    expect(service.getMuseums).toHaveBeenCalled();
+  });
+
 });

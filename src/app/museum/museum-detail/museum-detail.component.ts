@@ -11,7 +11,7 @@ export class MuseumDetailComponent implements OnInit {
   @Input() museumDetail!: Museum;
   selectedArtworksButton = false;
   selectedMuseum!: Museum;
-
+  @Input() selectedExhibitionsButton = false;
   @Input() museum!: Museum;
 
 
@@ -28,5 +28,12 @@ export class MuseumDetailComponent implements OnInit {
 
   getArworksList(museum: Museum): void {
     this.selectedMuseum = museum;
+    this.selectedArtworksButton = true;
   }
+
+  getExhibitionsList(museum: Museum): void {
+    this.selectedMuseum = museum;
+    this.selectedExhibitionsButton = true;
+  }
+
 }
