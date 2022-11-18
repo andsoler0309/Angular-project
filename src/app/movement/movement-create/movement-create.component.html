@@ -1,0 +1,105 @@
+<div class="container mt-4">
+  <h2 class="text-center">Create a new movement</h2>
+  <form
+    [formGroup]="movementForm"
+    (ngSubmit)="!movementForm.invalid && createMovement(movementForm.value)"
+  >
+    <!--Name-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="name">Name</label>
+      <input
+        novalidate
+        id="name"
+        class="form-control"
+        formControlName="name"
+        placeholder="Movement's name"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+        movementForm.get('name')!.hasError('required') &&
+        movementForm.get('name')!.touched
+        "
+      >
+        Name required
+      </div>
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="movementForm.get('name')!.hasError('minlength')"
+      >
+        Name too short
+      </div>
+    </div>
+
+    <!--country of origin-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="countryOfOrigin">Country of origin</label>
+      <input
+        novalidate
+        id="countryOfOrigin"
+        class="form-control"
+        formControlName="countryOfOrigin"
+        placeholder="Movement's Country of origin"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+        movementForm.get('countryOfOrigin')!.hasError('required') &&
+        movementForm.get('countryOfOrigin')!.touched
+        "
+      >
+        Country of origin required
+      </div>
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="movementForm.get('countryOfOrigin')!.hasError('minlength')"
+      >
+       Country of origin  too short
+      </div>
+    </div>
+
+
+    <!--Description-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="description">Description</label>
+      <input
+        novalidate
+        id="description"
+        class="form-control"
+        formControlName="description"
+        placeholder="Movement's short description"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+        movementForm.get('description')!.hasError('required') &&
+        movementForm.get('description')!.touched
+        "
+      >
+        Description required
+      </div>
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="movementForm.get('description')!.hasError('maxlength')"
+      >
+        Description too long
+      </div>
+    </div>
+
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!movementForm.valid"
+    >
+      Create
+    </button>
+    <button
+      type="button"
+      class="btn btn-danger ml-3"
+      (click)="cancelCreation()"
+    >
+      Cancel
+    </button>
+  </form>
+ </div>

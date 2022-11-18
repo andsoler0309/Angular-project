@@ -26,4 +26,8 @@ export class ArtworkService {
   getMuseumsArtworks(museumId: number): Observable<Artwork[]> {
     return this.http.get<Artwork[]>(environment.baseUrl + 'museums/' + museumId + '/artworks');
   }
+
+  createArtwork(artwork: Artwork): Observable<Artwork> {
+    return this.http.post<Artwork>(this.apiUrl, artwork);
+  }
 }

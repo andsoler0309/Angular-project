@@ -13,3 +13,8 @@
   background-color: #28a745;
   border-color: #28a745;
 }
+
+
+.dropdown-item {
+  color: black !important;
+}

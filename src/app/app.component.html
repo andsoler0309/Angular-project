@@ -10,8 +10,20 @@
         <li class="nav-item">
           <a i18n class="nav-link active" aria-current="page" [routerLink]="['/museums']">Inicio</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a i18n class="nav-link active" aria-current="page" [routerLink]="['/artworks/list']">Ver todas las obras de arte</a>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Obras de arte
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" [routerLink]="['/artworks/list']">Lista</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/artworks/create']">Crear</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a i18n class="nav-link active" aria-current="page" [routerLink]="['/movement/create']">Crear movimiento</a>
         </li>
         <li class="nav-item">
           <a i18n class="nav-link" href="#">Contacto</a>
