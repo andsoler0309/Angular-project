@@ -5,114 +5,154 @@
       <trans-unit id="9161060799652880976" datatype="html">
         <source>Explore Museums</source>
         <target>Explorar Museos</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="2821179408673282599" datatype="html">
         <source>Home</source>
         <target>Inicio</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="3263517408799447979" datatype="html">
         <source>Explore Artworks</source>
         <target>Explorar obras de arte</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="7941428823403788384" datatype="html">
         <source> Create </source>
         <target> Crear </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">17,19</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="8765110380106492126" datatype="html">
         <source>Create Movement</source>
         <target>Crear movimiento</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="1427432355378928966" datatype="html">
         <source>Create Artwork</source>
         <target>Crear obra de arte</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="7922989125096435449" datatype="html">
         <source>Contact</source>
         <target>Contacto</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">26</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="4580988005648117665" datatype="html">
         <source>Search</source>
         <target>Buscar</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="1190889488721783265" datatype="html">
         <source>Year: <x id="INTERPOLATION" equiv-text="{{ artworkDetail.year }}"/></source>
         <target>Año: <x id="INTERPOLATION" equiv-text="{{ artworkDetail.year }}"/></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/artwork/artwork-detail/artwork-detail.component.html</context>
-          <context context-type="linenumber">20</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="4804577572584453760" datatype="html">
         <source>Author: <x id="INTERPOLATION" equiv-text="{{ artworkDetail.artist.name }}"/></source>
         <target>Autor: <x id="INTERPOLATION" equiv-text="{{ artworkDetail.artist.name }}"/></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/artwork/artwork-detail/artwork-detail.component.html</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="1088376530942419040" datatype="html">
         <source>Artworks</source>
         <target>Obras de arte</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/artwork/artwork-list/artwork-list.component.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="5681346778475396643" datatype="html">
         <source>Sponsor</source>
         <target>Patrocinador</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/exhibition/exhibition-detail/exhibition-detail.component.html</context>
-          <context context-type="linenumber">7</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="4413298436043827483" datatype="html">
         <source>Visit their Website</source>
         <target>Visita su sitio web</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/exhibition/exhibition-detail/exhibition-detail.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="4377092032106909109" datatype="html">
         <source>Exhibitions</source>
         <target>Exhibiciones</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/exhibition/exhibition-list/exhibition-list.component.html</context>
-          <context context-type="linenumber">1</context>
-        </context-group>
+      </trans-unit>
+      <trans-unit id="4477068095111658341" datatype="html">
+        <source>Create a new artwork</source>
+        <target state="new">Crear una obra de arte</target>
+      </trans-unit>
+      <trans-unit id="8953033926734869941" datatype="html">
+        <source>Name</source>
+        <target state="new">Nombre</target>
+      </trans-unit>
+      <trans-unit id="6547696461546837820" datatype="html">
+        <source> Name required </source>
+        <target state="new"> Nombre requerido </target>
+      </trans-unit>
+      <trans-unit id="859561779626039980" datatype="html">
+        <source> Name too short </source>
+        <target state="new"> Nombre muy corto </target>
+      </trans-unit>
+      <trans-unit id="1464072562214937907" datatype="html">
+        <source>Year</source>
+        <target state="new">Año</target>
+      </trans-unit>
+      <trans-unit id="8057710562819980102" datatype="html">
+        <source> Year required </source>
+        <target state="new"> Año requerido </target>
+      </trans-unit>
+      <trans-unit id="8650499415827640724" datatype="html">
+        <source>Type</source>
+        <target state="new">Tipo</target>
+      </trans-unit>
+      <trans-unit id="1710715358900559238" datatype="html">
+        <source> Type required </source>
+        <target state="new"> Tipo requerido </target>
+      </trans-unit>
+      <trans-unit id="4902817035128594900" datatype="html">
+        <source>Description</source>
+        <target state="new">Descripcion</target>
+      </trans-unit>
+      <trans-unit id="1400145648854662190" datatype="html">
+        <source> Description required </source>
+        <target state="new"> Descripcion requerida </target>
+      </trans-unit>
+      <trans-unit id="2243461281433950507" datatype="html">
+        <source> Description too long </source>
+        <target state="new"> Descripcion muy larga </target>
+      </trans-unit>
+      <trans-unit id="4371801176580935152" datatype="html">
+        <source>Choose artist</source>
+        <target state="new">Escoge el artista</target>
+      </trans-unit>
+      <trans-unit id="2330577642930707695" datatype="html">
+        <source> Cancel </source>
+        <target state="new"> Cancelar </target>
+      </trans-unit>
+      <trans-unit id="3417708641151406394" datatype="html">
+        <source>Create a new movement</source>
+        <target state="new">Crea un nuevo movimiento pictórico</target>
+      </trans-unit>
+      <trans-unit id="8879319270768298059" datatype="html">
+        <source>Country of origin</source>
+        <target state="new">Pais de origen</target>
+      </trans-unit>
+      <trans-unit id="8685548677262177481" datatype="html">
+        <source> Country of origin required </source>
+        <target state="new"> Pais de origen requerido </target>
+      </trans-unit>
+      <trans-unit id="2916795577810822043" datatype="html">
+        <source> Country of origin too short </source>
+        <target state="new"> Pais de origen muy corto </target>
+      </trans-unit>
+      <trans-unit id="508839208740377970" datatype="html">
+        <source>Artwork&apos;s name</source>
+        <target state="new">Nombre de la obra de arte</target>
+      </trans-unit>
+      <trans-unit id="6404270696413826057" datatype="html">
+        <source>Artwork&apos;s year</source>
+        <target state="new">Año de la obra de arte</target>
+      </trans-unit>
+      <trans-unit id="270820846939549693" datatype="html">
+        <source>Artwork&apos;s type</source>
+        <target state="new">Tipo de la obra de arte</target>
+      </trans-unit>
+      <trans-unit id="8666765377483659257" datatype="html">
+        <source>Artwork&apos;s short description</source>
+        <target state="new">Pequeña descripcion de la obra de arte</target>
+      </trans-unit>
+      <trans-unit id="4449103676190381788" datatype="html">
+        <source>Movement&apos;s name</source>
+        <target state="new">Nombre del movimiento pictórico</target>
+      </trans-unit>
+      <trans-unit id="6471574636469681083" datatype="html">
+        <source>Movement&apos;s Country of origin</source>
+        <target state="new">Pais de origen del movimiento pictórico</target>
+      </trans-unit>
+      <trans-unit id="3390051541657377573" datatype="html">
+        <source>Movement&apos;s short description</source>
+        <target state="new">Pequeña descripcion del movimiento pictórico</target>
       </trans-unit>
     </body>
   </file>

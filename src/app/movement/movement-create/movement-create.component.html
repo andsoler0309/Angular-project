@@ -1,13 +1,14 @@
 <div class="container mt-4">
-  <h2 class="text-center">Create a new movement</h2>
+  <h2 class="text-center" i18n>Create a new movement</h2>
   <form
     [formGroup]="movementForm"
     (ngSubmit)="!movementForm.invalid && createMovement(movementForm.value)"
   >
     <!--Name-->
     <div class="form-group mx-sm-3 mb-2">
-      <label for="name">Name</label>
+      <label for="name" i18n>Name</label>
       <input
+      i18n-placeholder
         novalidate
         id="name"
         class="form-control"
@@ -15,6 +16,7 @@
         placeholder="Movement's name"
       />
       <div
+      i18n
         class="alert alert-danger alert-dismissible fade show"
         *ngIf="
         movementForm.get('name')!.hasError('required') &&
@@ -24,6 +26,7 @@
         Name required
       </div>
       <div
+      i18n
         class="alert alert-danger alert-dismissible fade show"
         *ngIf="movementForm.get('name')!.hasError('minlength')"
       >
@@ -33,8 +36,9 @@
 
     <!--country of origin-->
     <div class="form-group mx-sm-3 mb-2">
-      <label for="countryOfOrigin">Country of origin</label>
+      <label for="countryOfOrigin" i18n>Country of origin</label>
       <input
+      i18n-placeholder
         novalidate
         id="countryOfOrigin"
         class="form-control"
@@ -42,6 +46,7 @@
         placeholder="Movement's Country of origin"
       />
       <div
+      i18n
         class="alert alert-danger alert-dismissible fade show"
         *ngIf="
         movementForm.get('countryOfOrigin')!.hasError('required') &&
@@ -51,6 +56,7 @@
         Country of origin required
       </div>
       <div
+      i18n
         class="alert alert-danger alert-dismissible fade show"
         *ngIf="movementForm.get('countryOfOrigin')!.hasError('minlength')"
       >
@@ -61,8 +67,9 @@
 
     <!--Description-->
     <div class="form-group mx-sm-3 mb-2">
-      <label for="description">Description</label>
+      <label for="description" i18n>Description</label>
       <input
+      i18n-placeholder
         novalidate
         id="description"
         class="form-control"
@@ -70,6 +77,7 @@
         placeholder="Movement's short description"
       />
       <div
+      i18n
         class="alert alert-danger alert-dismissible fade show"
         *ngIf="
         movementForm.get('description')!.hasError('required') &&
@@ -79,6 +87,7 @@
         Description required
       </div>
       <div
+      i18n
         class="alert alert-danger alert-dismissible fade show"
         *ngIf="movementForm.get('description')!.hasError('maxlength')"
       >
@@ -88,6 +97,7 @@
 
 
     <button
+    i18n
       type="submit"
       class="btn btn-primary"
       [disabled]="!movementForm.valid"
@@ -95,6 +105,7 @@
       Create
     </button>
     <button
+    i18n
       type="button"
       class="btn btn-danger ml-3"
       (click)="cancelCreation()"

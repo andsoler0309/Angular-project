@@ -1,0 +1,10 @@
+.artist-selector__dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-selector__dropdown select {
+  margin-bottom: 1rem;
+  width: 50%;
+  height: 30px;
+}
