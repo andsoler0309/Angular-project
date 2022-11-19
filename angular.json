@@ -87,7 +87,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "es": {
-              "browserTarget": "book-list:build:es"
+              "browserTarget": "museums-front:build:es"
             },
             "production": {
               "browserTarget": "museums-front:build:production"

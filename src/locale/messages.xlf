@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="9161060799652880976" datatype="html">
+        <source>Explore Museums</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8765110380106492126" datatype="html">
+        <source>Create Movement</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7922989125096435449" datatype="html">
+        <source>Contact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4580988005648117665" datatype="html">
+        <source>Search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1190889488721783265" datatype="html">
+        <source>Year: <x id="INTERPOLATION" equiv-text="{{ artworkDetail.year }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artwork/artwork-detail/artwork-detail.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4804577572584453760" datatype="html">
+        <source>Author: <x id="INTERPOLATION" equiv-text="{{ artworkDetail.artist.name }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artwork/artwork-detail/artwork-detail.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1088376530942419040" datatype="html">
+        <source>Artworks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artwork/artwork-list/artwork-list.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5681346778475396643" datatype="html">
+        <source>Sponsor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibition/exhibition-detail/exhibition-detail.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4413298436043827483" datatype="html">
+        <source>Visit their Website</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibition/exhibition-detail/exhibition-detail.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4377092032106909109" datatype="html">
+        <source>Exhibitions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibition/exhibition-list/exhibition-list.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
