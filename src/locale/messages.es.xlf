@@ -18,12 +18,36 @@
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="3263517408799447979" datatype="html">
+        <source>Explore Artworks</source>
+        <target>Explorar obras de arte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7941428823403788384" datatype="html">
+        <source> Create </source>
+        <target> Crear </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">17,19</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8765110380106492126" datatype="html">
         <source>Create Movement</source>
         <target>Crear movimiento</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1427432355378928966" datatype="html">
+        <source>Create Artwork</source>
+        <target>Crear obra de arte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7922989125096435449" datatype="html">
@@ -31,7 +55,7 @@
         <target>Contacto</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4580988005648117665" datatype="html">
@@ -39,7 +63,7 @@
         <target>Buscar</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1190889488721783265" datatype="html">
