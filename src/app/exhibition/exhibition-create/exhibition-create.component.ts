@@ -27,11 +27,17 @@ export class ExhibitionCreateComponent implements OnInit {
   }
 
   createExhibition(exhibition: Exhibition){
-    console.log("creado");
+    this.exhibitionService.createExhibition(exhibition).subscribe(exhibition=>{
+      console.info("The exhibition was created: ", exhibition)
+      this.toastr.success("Confirmation", "Exhibition created")
+      this.exhibitionForm.reset();
+    })
   }
 
   cancelCreation(){
-    console.log("cancelado");
+    this.exhibitionForm.reset();
+    console.info("The creation was canceled")
+    this.toastr.info("Confirmation", "Creation canceled")
   }
 
 }
