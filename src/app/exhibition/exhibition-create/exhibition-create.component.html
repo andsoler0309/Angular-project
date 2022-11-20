@@ -51,89 +51,18 @@
         Description required
       </div>
     </div>
-
-  <div><h2>Exhibition's Sponsor</h2></div>
-
-
-
-    <!--Sponsor Name-->
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="sponsorName">Sponsor Name</label>
-      <input
-        novalidate
-        id="sponsorName"
-        class="form-control"
-        formControlName="sponsorName"
-        placeholder="Exhibition sponsor's name"
-      />
-      <div
-        class="alert alert-danger alert-dismissible fade show"
-        *ngIf="
-          exhibitionForm.get('sponsorName')!.hasError('required') &&
-          exhibitionForm.get('sponsorName')!.touched
-        "
-      >
-        Sponsor name required
-      </div>
-      <div
-        class="alert alert-danger alert-dismissible fade show"
-        *ngIf="exhibitionForm.get('sponsorName')!.hasError('minlength')"
-      >
-        Sponsor name too short
-      </div>
-    </div>
-    <!--Sponsor Description-->
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="sponsorDescription">Sponsor Description</label>
-      <input
-        novalidate
-        id="sponsorDescription"
-        class="form-control"
-        formControlName="sponsorDescription"
-        placeholder="Exhibition sponsor's description"
-      />
-      <div
-        class="alert alert-danger alert-dismissible fade show"
-        *ngIf="
-        exhibitionForm.get('sponsorDescription')!.hasError('required') &&
-        exhibitionForm.get('sponsorDescription')!.touched
-        "
-      >
-        Sponsor description required
-      </div>
-      <div
-        class="alert alert-danger alert-dismissible fade show"
-        *ngIf="exhibitionForm.get('sponsorDescription')!.hasError('maxlength')"
-      >
-      Sponsor description too long
-      </div>
-    </div>
-
-    <!--Sponsor Website-->
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="sponsorWebsite">Sponsor Website</label>
-      <input
-        novalidate
-        id="sponsorWebsite"
-        class="form-control"
-        formControlName="sponsorWebsite"
-        placeholder="Exhibition sponsor's website"
-      />
-      <div
-        class="alert alert-danger alert-dismissible fade show"
-        *ngIf="
-          exhibitionForm.get('sponsorWebsite')!.hasError('required') &&
-          exhibitionForm.get('sponsorWebsite')!.touched
-        "
-      >
-        Sponsor website required
-      </div>
-      <div
-        class="alert alert-danger alert-dismissible fade show"
-        *ngIf="exhibitionForm.get('sponsorWebsite')!.hasError('minlength')"
-      >
-      Sponsor website too short
-      </div>
+    <!--Sponsor-->
+    <div class="form-group mx-sm-3 mb-2 artist-selector__dropdown">
+      <label for="exhibition_dropdown">Sponsor</label>
+      <select
+          id="exhibition_dropdown"
+          class="form-control"
+          formControlName="sponsor"
+        >
+          <option *ngFor="let sponsor of sponsors" [ngValue]="sponsor">
+            {{ sponsor.name }}
+          </option>
+    </select>
     </div>
 
     <button

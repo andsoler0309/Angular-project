@@ -12,7 +12,8 @@ import { Sponsor } from 'src/app/sponsor';
 })
 export class ExhibitionCreateComponent implements OnInit {
   exhibitionForm!: FormGroup;
-  testSponsor = new Sponsor("Test sponsor", "Test description", "https://github.com/MISW-4104-Web/MISW4104_202215_Equipo21");
+  sponsors: Array<Sponsor> = [new Sponsor("Test sponsor 1", "Test description", "https://github.com/MISW-4104-Web/MISW4104_202215_Equipo21"),
+    new Sponsor("Test sponsor 2", "Test description", "https://github.com/MISW-4104-Web/MISW4104_202215_Equipo21")];
 
   constructor(private exhibitionService: ExhibitionService,
     private formBuilder: FormBuilder,
@@ -22,9 +23,7 @@ export class ExhibitionCreateComponent implements OnInit {
     this.exhibitionForm = this.formBuilder.group({
       name: ["", [Validators.required, Validators.minLength(2)]],
       description: ["", [Validators.required, Validators.maxLength(100)]],
-      sponsorName: ["", [Validators.required, Validators.minLength(2)]],
-      sponsorDescription: ["", [Validators.required, Validators.maxLength(100)]],
-      sponsorWebsite: ["", Validators.required],
+      sponsor: ["", Validators.required,],
     });
   }
 
