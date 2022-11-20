@@ -1,7 +1,125 @@
-<div class="container-fluid">
-  <div class="row">
-      <div class="col mb-2">
-          <p>Hello!</p>
+<div class="container mt-4">
+  <h1 class="text-center">Create a new exhibition</h1>
+  <form
+    [formGroup]="exhibitionForm"
+    (ngSubmit)="!exhibitionForm.invalid && createExhibition(exhibitionForm.value)"
+  >
+  <div><h2>Exhibition Details</h2></div>
+    <!--Name-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="name">Name</label>
+      <input
+        novalidate
+        id="name"
+        class="form-control"
+        formControlName="name"
+        placeholder="Exhibition's name"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          exhibitionForm.get('name')!.hasError('required') &&
+          exhibitionForm.get('name')!.touched
+        "
+      >
+        Name required
       </div>
-  </div>
-</div>
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="exhibitionForm.get('name')!.hasError('minlength')"
+      >
+        Name too short
+      </div>
+    </div>
+
+    <!--Description-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="description">Description</label>
+      <input
+        novalidate
+        id="description"
+        class="form-control"
+        formControlName="description"
+        placeholder="Exhibition's description"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          exhibitionForm.get('description')!.hasError('required') &&
+          exhibitionForm.get('description')!.touched
+        "
+      >
+        Description required
+      </div>
+    </div>
+
+  <div><h2>Exhibition's Sponsor</h2></div>
+    <!--Sponsor Name-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="sponsorName">Sponsor Name</label>
+      <input
+        novalidate
+        id="sponsorName"
+        class="form-control"
+        formControlName="name"
+        placeholder="Exhibition sponsor's name"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          exhibitionForm.get('sponsorName')!.hasError('required') &&
+          exhibitionForm.get('sponsorName')!.touched
+        "
+      >
+        Sponsor name required
+      </div>
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="exhibitionForm.get('sponsorName')!.hasError('minlength')"
+      >
+        Sponsor name too short
+      </div>
+    </div>
+    <!--Sponsor Description-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="sponsorDescription">Sponsor Description</label>
+      <input
+        novalidate
+        id="sponsorDescription"
+        class="form-control"
+        formControlName="sponsorDescription"
+        placeholder="Sponsor's description"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+        exhibitionForm.get('sponsorDescription')!.hasError('required') &&
+        exhibitionForm.get('sponsorDescription')!.touched
+        "
+      >
+        Sponsor description required
+      </div>
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="exhibitionForm.get('sponsorDescription')!.hasError('maxlength')"
+      >
+      Sponsor description too long
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!exhibitionForm.valid"
+    >
+      Create
+    </button>
+    <button
+      type="button"
+      class="btn btn-danger ml-3"
+      (click)="cancelCreation()"
+    >
+      Cancel
+    </button>
+  </form>
+ </div>

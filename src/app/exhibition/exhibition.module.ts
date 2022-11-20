@@ -5,12 +5,14 @@ import { ExhibitionDetailComponent } from './exhibition-detail/exhibition-detail
 import { RouterModule } from '@angular/router';
 import { ExhibitionCreateComponent } from './exhibition-create/exhibition-create.component';
 import { ExhibitionRoutingModule } from './exhibition-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    ExhibitionRoutingModule
+    ExhibitionRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [ExhibitionListComponent, ExhibitionDetailComponent, ExhibitionCreateComponent],
   exports: [ExhibitionListComponent, ExhibitionDetailComponent, ExhibitionCreateComponent]
