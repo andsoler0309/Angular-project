@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import { ExhibitionCreateComponent } from './exhibition-create.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('ExhibitionCreateComponent', () => {
   let component: ExhibitionCreateComponent;
@@ -11,6 +13,7 @@ describe('ExhibitionCreateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ReactiveFormsModule, ToastrModule.forRoot(), HttpClientModule],
       declarations: [ ExhibitionCreateComponent ]
     })
     .compileComponents();

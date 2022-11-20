@@ -3,6 +3,7 @@ import { ExhibitionService } from '../exhibition-list/exhibition.service';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ToastrService } from 'ngx-toastr';
 import { Exhibition } from '../exhibition';
+import { Sponsor } from 'src/app/sponsor';
 
 @Component({
   selector: 'app-exhibition-create',
@@ -11,6 +12,7 @@ import { Exhibition } from '../exhibition';
 })
 export class ExhibitionCreateComponent implements OnInit {
   exhibitionForm!: FormGroup;
+  testSponsor = new Sponsor("Test sponsor", "Test description", "https://github.com/MISW-4104-Web/MISW4104_202215_Equipo21");
 
   constructor(private exhibitionService: ExhibitionService,
     private formBuilder: FormBuilder,

@@ -4,7 +4,6 @@
     [formGroup]="exhibitionForm"
     (ngSubmit)="!exhibitionForm.invalid && createExhibition(exhibitionForm.value)"
   >
-  <div><h2>Exhibition Details</h2></div>
     <!--Name-->
     <div class="form-group mx-sm-3 mb-2">
       <label for="name">Name</label>
@@ -54,6 +53,9 @@
     </div>
 
   <div><h2>Exhibition's Sponsor</h2></div>
+
+
+
     <!--Sponsor Name-->
     <div class="form-group mx-sm-3 mb-2">
       <label for="sponsorName">Sponsor Name</label>
