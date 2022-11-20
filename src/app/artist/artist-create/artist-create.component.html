@@ -1,3 +1,103 @@
-<p>
-  artist-create works!
-</p>
+<div class="container mt-4">
+  <h1 i18n class="text-center">Create a new artist</h1>
+  <form
+    [formGroup]="artistForm"
+    (ngSubmit)="!artistForm.invalid && createArtist(artistForm.value)"
+  >
+    <!--Name-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label i18n for="name">Name</label>
+      <input
+        novalidate
+        id="name"
+        class="form-control"
+        formControlName="name"
+        placeholder="Artist's full name" i18n-placeholder
+      />
+      <div i18n
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          artistForm.get('name')!.hasError('required') &&
+          artistForm.get('name')!.touched
+        "
+      >
+        Name required
+      </div>
+      <div i18n
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="artistForm.get('name')!.hasError('minlength')"
+      >
+        Name too short
+      </div>
+    </div>
+
+    <!--birthplace-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label i18n for="birthplace">Birthplace</label>
+      <input
+        novalidate
+        id="birthplace"
+        class="form-control"
+        formControlName="birthplace"
+        placeholder="Artist's birthplace" i18n-placeholder
+      />
+      <div i18n
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          artistForm.get('birthplace')!.hasError('required') &&
+          artistForm.get('birthplace')!.touched
+        "
+      >
+        Birthplace required
+      </div>
+    </div>
+
+    <!--birthdate-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label i18n for="birthDate">Birth Date</label>
+      <input
+        novalidate
+        id="birthDate"
+        class="form-control"
+        formControlName="birthDate"
+        placeholder="Artist's birth date" i18n-placeholder
+      />
+      <div i18n
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          artistForm.get('birthDate')!.hasError('required') &&
+          artistForm.get('birthDate')!.touched
+        "
+      >
+        Birth date required
+      </div>
+    </div>
+
+    <!--related movements-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label i18n for="birthDate">Related Artistic Movements</label>
+      <input
+        novalidate
+        id="relatedMovements"
+        class="form-control"
+        formControlName="relatedMovements"
+        placeholder="Artistic movements the artist is related to" i18n-placeholder
+      />
+    </div>
+
+    <button i18n
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!artistForm.valid"
+    >
+      Create
+    </button>
+    <button i18n
+      type="button"
+      class="btn btn-danger ml-3"
+      (click)="cancelCreation()"
+    >
+      Cancel
+    </button>
+  </form>
+ </div>

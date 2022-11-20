@@ -21,12 +21,12 @@ export class ArtistCreateComponent implements OnInit {
     this.artistForm = this.formBuilder.group({
       name: ["", [Validators.required, Validators.minLength(2)]],
       birthplace: ["", Validators.required],
-      birthdate: ["", Validators.required],
-      relatedMovements: ["", Validators.required,],
+      birthDate: ["", Validators.required],
+      relatedMovements: [""],
     });
   }
 
-  createExhibition(artist: Artist){
+  createArtist(artist: Artist){
     console.log(artist);
 //    this.exhibitionService.createExhibition(exhibition).subscribe(exhibition=>{
 //      console.info("The exhibition was created: ", exhibition)
