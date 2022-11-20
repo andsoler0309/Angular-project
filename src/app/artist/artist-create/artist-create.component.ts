@@ -16,7 +16,7 @@ export class ArtistCreateComponent implements OnInit {
   movements: Array<Movement> = [];
 
 
-  constructor(private artistServive: ArtistService,
+  constructor(private artistService: ArtistService,
     private formBuilder: FormBuilder,
     private toastr: ToastrService) { }
 
@@ -25,18 +25,17 @@ export class ArtistCreateComponent implements OnInit {
     this.artistForm = this.formBuilder.group({
       name: ["", [Validators.required, Validators.minLength(2)]],
       birthplace: ["", Validators.required],
-      birthdate: ["", Validators.required],
+      birthdate: ["", [Validators.required,Validators.minLength(10), Validators.maxLength(10)]],
       movements: [""],
     });
   }
 
   createArtist(artist: Artist){
-    console.log(artist);
-//    this.exhibitionService.createExhibition(exhibition).subscribe(exhibition=>{
-//      console.info("The exhibition was created: ", exhibition)
-//      this.toastr.success("Confirmation", "Exhibition created")
-//      this.exhibitionForm.reset();
-//    })
+    this.artistService.createArtist(artist).subscribe(artists=>{
+      console.info('The artist was created: ', artist);
+      this.toastr.success('Confirmation', 'artist created');
+      this.artistForm.reset();
+    });
   }
 
   cancelCreation(){
@@ -46,7 +45,7 @@ export class ArtistCreateComponent implements OnInit {
   }
 
   getMovements(){
-    this.artistServive.getMovements().subscribe(movements=>{
+    this.artistService.getMovements().subscribe(movements=>{
       this.movements = movements;
     });
   }

@@ -60,7 +60,7 @@
         id="birthdate"
         class="form-control"
         formControlName="birthdate"
-        placeholder="Artist's birth date" i18n-placeholder
+        placeholder="YYYY-MM-DD" i18n-placeholder
       />
       <div i18n
         class="alert alert-danger alert-dismissible fade show"
@@ -71,8 +71,13 @@
       >
         Birth date required
       </div>
+      <div i18n
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="artistForm.get('birthdate')!.hasError('minlength') || artistForm.get('birthdate')!.hasError('maxlength')"
+      >
+        Please enter the birth date using the format "YYYY-MM-DD"
+      </div>
     </div>
-
     <!--related movements-->
     <div class="form-group mx-sm-3 mb-2 exhibition-selector__dropdown">
       <label for="movements" i18n>Related Artistic Movements</label>
@@ -80,11 +85,11 @@
           id="movements"
           class="form-control"
           formControlName="movements"
-        >
+          multiple>
           <option *ngFor="let movement of movements" [ngValue]="movement">
             {{ movement.name }}
           </option>
-    </select>
+        </select>
     </div>
 
     <button i18n

@@ -23,4 +23,9 @@ export class ArtistService {
   getMovements(): Observable<Movement[]> {
     return this.http.get<Movement[]>(this.apiUrlMovements);
   }
+
+  createArtist(artist: Artist): Observable<Artist> {
+    return this.http.post<Artist>(this.apiUrl, artist);
+  }
+
 }
