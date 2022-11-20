@@ -74,15 +74,17 @@
     </div>
 
     <!--related movements-->
-    <div class="form-group mx-sm-3 mb-2">
-      <label i18n for="movements">Related Artistic Movements</label>
-      <input
-        novalidate
-        id="movements"
-        class="form-control"
-        formControlName="movements"
-        placeholder="Artistic movements the artist is related to" i18n-placeholder
-      />
+    <div class="form-group mx-sm-3 mb-2 exhibition-selector__dropdown">
+      <label for="movements" i18n>Related Artistic Movements</label>
+      <select
+          id="movements"
+          class="form-control"
+          formControlName="movements"
+        >
+          <option *ngFor="let movement of movements" [ngValue]="movement">
+            {{ movement.name }}
+          </option>
+    </select>
     </div>
 
     <button i18n
