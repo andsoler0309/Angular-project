@@ -128,6 +128,39 @@
       <trans-unit id="8811724726997872926" datatype="html">
         <source>Exhibition&apos;s name</source>
       </trans-unit>
+      <trans-unit id="1732601738720859778" datatype="html">
+        <source>Artist&apos;s birthplace</source>
+      </trans-unit>
+      <trans-unit id="3084027116734565257" datatype="html">
+        <source>Artist&apos;s full name</source>
+      </trans-unit>
+      <trans-unit id="444979833081311681" datatype="html">
+        <source>YYYY-MM-DD</source>
+      </trans-unit>
+      <trans-unit id="5476690829661621250" datatype="html">
+        <source> Birth date required </source>
+      </trans-unit>
+      <trans-unit id="5568875939225929320" datatype="html">
+        <source>Birth Date</source>
+      </trans-unit>
+      <trans-unit id="5577412723235121565" datatype="html">
+        <source> Please enter the birth date using the format &quot;YYYY-MM-DD&quot; </source>
+      </trans-unit>
+      <trans-unit id="6059878877377502612" datatype="html">
+        <source>Related Artistic Movements</source>
+      </trans-unit>
+      <trans-unit id="8167007771609098494" datatype="html">
+        <source>Create a new artist</source>
+      </trans-unit>
+      <trans-unit id="8174375854720578083" datatype="html">
+        <source>Birthplace</source>
+      </trans-unit>
+      <trans-unit id="8810385731879164799" datatype="html">
+        <source> Birthplace required </source>
+      </trans-unit>
+      <trans-unit id="9157435248637277596" datatype="html">
+        <source>Create Artist</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -4,13 +4,18 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ArtistCreateComponent } from './artist-create.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ArtistCreateComponent', () => {
   let component: ArtistCreateComponent;
   let fixture: ComponentFixture<ArtistCreateComponent>;
+  let debug: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ReactiveFormsModule, ToastrModule.forRoot(), HttpClientModule],
       declarations: [ ArtistCreateComponent ]
     })
     .compileComponents();
@@ -20,9 +25,35 @@ describe('ArtistCreateComponent', () => {
     fixture = TestBed.createComponent(ArtistCreateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    debug = fixture.debugElement;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have 1 <h1> element', () => {
+    expect(debug.queryAll(By.css('h1'))).toHaveSize(1);
+  });
+
+  it('should have 1 <form> element', () => {
+    expect(debug.queryAll(By.css('form'))).toHaveSize(1);
+  });
+
+  it('should have 4 <label> elements', () => {
+    expect(debug.queryAll(By.css('label'))).toHaveSize(4);
+  });
+
+  it('should have 2 <button> elements', () => {
+    expect(debug.queryAll(By.css('button'))).toHaveSize(2);
+  });
+
+  it('should have 3 <input> elements', () => {
+    expect(debug.queryAll(By.css('input'))).toHaveSize(3);
+  });
+
+  it('should have 1 <select> element', () => {
+    expect(debug.queryAll(By.css('select'))).toHaveSize(1);
+  });
+
 });

@@ -170,6 +170,50 @@
         <source>Exhibition&apos;s description</source>
         <target state="new">Descripción de la exhibición</target>
       </trans-unit>
+      <trans-unit id="9157435248637277596" datatype="html">
+        <source>Create Artist</source>
+        <target state="new">Crear artista</target>
+      </trans-unit>
+      <trans-unit id="8167007771609098494" datatype="html">
+        <source>Create a new artist</source>
+        <target state="new">Crear un nuevo artista</target>
+      </trans-unit>
+      <trans-unit id="3084027116734565257" datatype="html">
+        <source>Artist&apos;s full name</source>
+        <target state="new">Nombre completo del artista</target>
+      </trans-unit>
+      <trans-unit id="8174375854720578083" datatype="html">
+        <source>Birthplace</source>
+        <target state="new">Lugar de nacimiento</target>
+      </trans-unit>
+      <trans-unit id="1732601738720859778" datatype="html">
+        <source>Artist&apos;s birthplace</source>
+        <target state="new">Lugar de nacimiento del artista</target>
+      </trans-unit>
+      <trans-unit id="8810385731879164799" datatype="html">
+        <source> Birthplace required </source>
+        <target state="new"> Lugar de nacimiento requerido </target>
+      </trans-unit>
+      <trans-unit id="5568875939225929320" datatype="html">
+        <source>Birth Date</source>
+        <target state="new">Fecha de nacimiento</target>
+      </trans-unit>
+      <trans-unit id="444979833081311681" datatype="html">
+        <source>YYYY-MM-DD</source>
+        <target state="new">AAAA-MM-DD</target>
+      </trans-unit>
+      <trans-unit id="5476690829661621250" datatype="html">
+        <source> Birth date required </source>
+        <target state="new"> Fecha de nacimiento requerida </target>
+      </trans-unit>
+      <trans-unit id="5577412723235121565" datatype="html">
+        <source> Please enter the birth date using the format &quot;YYYY-MM-DD&quot; </source>
+        <target state="new"> Por favor, entre una fecha de nacimiento usando el formato &quot;AAAA-MM-DD&quot; </target>
+      </trans-unit>
+      <trans-unit id="6059878877377502612" datatype="html">
+        <source>Related Artistic Movements</source>
+        <target state="new">Movimientos pictóricos relacionados</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
