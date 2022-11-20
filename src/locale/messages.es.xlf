@@ -92,15 +92,15 @@
       </trans-unit>
       <trans-unit id="4902817035128594900" datatype="html">
         <source>Description</source>
-        <target state="new">Descripcion</target>
+        <target state="new">Descripción</target>
       </trans-unit>
       <trans-unit id="1400145648854662190" datatype="html">
         <source> Description required </source>
-        <target state="new"> Descripcion requerida </target>
+        <target state="new"> Descripción requerida </target>
       </trans-unit>
       <trans-unit id="2243461281433950507" datatype="html">
         <source> Description too long </source>
-        <target state="new"> Descripcion muy larga </target>
+        <target state="new"> Descripción muy larga </target>
       </trans-unit>
       <trans-unit id="4371801176580935152" datatype="html">
         <source>Choose artist</source>
@@ -116,15 +116,15 @@
       </trans-unit>
       <trans-unit id="8879319270768298059" datatype="html">
         <source>Country of origin</source>
-        <target state="new">Pais de origen</target>
+        <target state="new">País de origen</target>
       </trans-unit>
       <trans-unit id="8685548677262177481" datatype="html">
         <source> Country of origin required </source>
-        <target state="new"> Pais de origen requerido </target>
+        <target state="new"> País de origen requerido </target>
       </trans-unit>
       <trans-unit id="2916795577810822043" datatype="html">
         <source> Country of origin too short </source>
-        <target state="new"> Pais de origen muy corto </target>
+        <target state="new"> País de origen muy corto </target>
       </trans-unit>
       <trans-unit id="508839208740377970" datatype="html">
         <source>Artwork&apos;s name</source>
@@ -148,11 +148,27 @@
       </trans-unit>
       <trans-unit id="6471574636469681083" datatype="html">
         <source>Movement&apos;s Country of origin</source>
-        <target state="new">Pais de origen del movimiento pictórico</target>
+        <target state="new">País de origen del movimiento pictórico</target>
       </trans-unit>
       <trans-unit id="3390051541657377573" datatype="html">
         <source>Movement&apos;s short description</source>
         <target state="new">Pequeña descripcion del movimiento pictórico</target>
+      </trans-unit>
+      <trans-unit id="7114442809700431745" datatype="html">
+        <source>Create Exhibition</source>
+        <target state="new">Crear exhibición</target>
+      </trans-unit>
+      <trans-unit id="2124547088481534050" datatype="html">
+        <source>Create a new exhibition</source>
+        <target state="new">Crear una nueva exhibición</target>
+      </trans-unit>
+      <trans-unit id="8811724726997872926" datatype="html">
+        <source>Exhibition&apos;s name</source>
+        <target state="new">Nombre de la exhibición</target>
+      </trans-unit>
+      <trans-unit id="8631030775546164317" datatype="html">
+        <source>Exhibition&apos;s description</source>
+        <target state="new">Descripción de la exhibición</target>
       </trans-unit>
     </body>
   </file>

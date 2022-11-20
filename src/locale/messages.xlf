@@ -116,6 +116,18 @@
       <trans-unit id="8666765377483659257" datatype="html">
         <source>Artwork&apos;s short description</source>
       </trans-unit>
+      <trans-unit id="2124547088481534050" datatype="html">
+        <source>Create a new exhibition</source>
+      </trans-unit>
+      <trans-unit id="7114442809700431745" datatype="html">
+        <source>Create Exhibition</source>
+      </trans-unit>
+      <trans-unit id="8631030775546164317" datatype="html">
+        <source>Exhibition&apos;s description</source>
+      </trans-unit>
+      <trans-unit id="8811724726997872926" datatype="html">
+        <source>Exhibition&apos;s name</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

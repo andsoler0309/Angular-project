@@ -1,20 +1,20 @@
 <div class="container mt-4">
-  <h1 class="text-center">Create a new exhibition</h1>
+  <h1 i18n class="text-center">Create a new exhibition</h1>
   <form
     [formGroup]="exhibitionForm"
     (ngSubmit)="!exhibitionForm.invalid && createExhibition(exhibitionForm.value)"
   >
     <!--Name-->
     <div class="form-group mx-sm-3 mb-2">
-      <label for="name">Name</label>
+      <label i18n for="name">Name</label>
       <input
         novalidate
         id="name"
         class="form-control"
         formControlName="name"
-        placeholder="Exhibition's name"
+        placeholder="Exhibition's name" i18n-placeholder
       />
-      <div
+      <div i18n
         class="alert alert-danger alert-dismissible fade show"
         *ngIf="
           exhibitionForm.get('name')!.hasError('required') &&
@@ -23,7 +23,7 @@
       >
         Name required
       </div>
-      <div
+      <div i18n
         class="alert alert-danger alert-dismissible fade show"
         *ngIf="exhibitionForm.get('name')!.hasError('minlength')"
       >
@@ -33,15 +33,15 @@
 
     <!--Description-->
     <div class="form-group mx-sm-3 mb-2">
-      <label for="description">Description</label>
+      <label i18n for="description">Description</label>
       <input
         novalidate
         id="description"
         class="form-control"
         formControlName="description"
-        placeholder="Exhibition's description"
+        placeholder="Exhibition's description" i18n-placeholder
       />
-      <div
+      <div i18n
         class="alert alert-danger alert-dismissible fade show"
         *ngIf="
           exhibitionForm.get('description')!.hasError('required') &&
@@ -53,7 +53,7 @@
     </div>
     <!--Sponsor-->
     <div class="form-group mx-sm-3 mb-2 artist-selector__dropdown">
-      <label for="exhibition_dropdown">Sponsor</label>
+      <label i18n for="exhibition_dropdown">Sponsor</label>
       <select
           id="exhibition_dropdown"
           class="form-control"
@@ -65,14 +65,14 @@
     </select>
     </div>
 
-    <button
+    <button i18n
       type="submit"
       class="btn btn-primary"
       [disabled]="!exhibitionForm.valid"
     >
       Create
     </button>
-    <button
+    <button i18n
       type="button"
       class="btn btn-danger ml-3"
       (click)="cancelCreation()"
