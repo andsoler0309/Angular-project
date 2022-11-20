@@ -107,6 +107,33 @@
       </div>
     </div>
 
+    <!--Sponsor Website-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="sponsorWebsite">Sponsor Website</label>
+      <input
+        novalidate
+        id="sponsorWebsite"
+        class="form-control"
+        formControlName="sponsorWebsite"
+        placeholder="Exhibition sponsor's website"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          exhibitionForm.get('sponsorWebsite')!.hasError('required') &&
+          exhibitionForm.get('sponsorWebsite')!.touched
+        "
+      >
+        Sponsor website required
+      </div>
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="exhibitionForm.get('sponsorWebsite')!.hasError('minlength')"
+      >
+      Sponsor website too short
+      </div>
+    </div>
+
     <button
       type="submit"
       class="btn btn-primary"
