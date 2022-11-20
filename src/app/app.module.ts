@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
 import { HttpErrorInterceptorService } from './interceptors/http-error-interceptor.service';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ExhibitionRoutingModule } from './exhibition/exhibition-routing.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ArtworkModule,
     MovementModule,
     ExhibitionModule,
+    ExhibitionRoutingModule,
     ArtworkRoutingModule,
     RouterModule,
     ToastrModule.forRoot(),
