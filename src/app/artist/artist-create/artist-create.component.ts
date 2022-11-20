@@ -21,8 +21,8 @@ export class ArtistCreateComponent implements OnInit {
     this.artistForm = this.formBuilder.group({
       name: ["", [Validators.required, Validators.minLength(2)]],
       birthplace: ["", Validators.required],
-      birthDate: ["", Validators.required],
-      relatedMovements: [""],
+      birthdate: ["", Validators.required],
+      movements: [""],
     });
   }
 

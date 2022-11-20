@@ -54,19 +54,19 @@
 
     <!--birthdate-->
     <div class="form-group mx-sm-3 mb-2">
-      <label i18n for="birthDate">Birth Date</label>
+      <label i18n for="birthdate">Birth Date</label>
       <input
         novalidate
-        id="birthDate"
+        id="birthdate"
         class="form-control"
-        formControlName="birthDate"
+        formControlName="birthdate"
         placeholder="Artist's birth date" i18n-placeholder
       />
       <div i18n
         class="alert alert-danger alert-dismissible fade show"
         *ngIf="
-          artistForm.get('birthDate')!.hasError('required') &&
-          artistForm.get('birthDate')!.touched
+          artistForm.get('birthdate')!.hasError('required') &&
+          artistForm.get('birthdate')!.touched
         "
       >
         Birth date required
@@ -75,12 +75,12 @@
 
     <!--related movements-->
     <div class="form-group mx-sm-3 mb-2">
-      <label i18n for="birthDate">Related Artistic Movements</label>
+      <label i18n for="movements">Related Artistic Movements</label>
       <input
         novalidate
-        id="relatedMovements"
+        id="movements"
         class="form-control"
-        formControlName="relatedMovements"
+        formControlName="movements"
         placeholder="Artistic movements the artist is related to" i18n-placeholder
       />
     </div>
