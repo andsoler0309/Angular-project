@@ -16,11 +16,12 @@
   justify-content: center;
   width: 60%;
   height: 100%;
-  background-color: rgba(128, 128, 128, 0.174);
+  background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  /* border: 1px solid #1DD3B0; */
+  border: 1px solid #1DD3B0;
 }
+
 
 .image__container {
   display: flex;
@@ -49,9 +50,4 @@
 
 .card-text-light {
   color: #707070;
-}
-
-.btn-primary{
-  background-color: #155087;
-  color: white;
 }

@@ -5,6 +5,9 @@ import { MuseumListComponent } from './museum-list/museum-list.component';
 import { MuseumDetailComponent } from './museum-detail/museum-detail.component';
 import { ArtworkModule } from '../artwork/artwork.module';
 import { ExhibitionModule } from '../exhibition/exhibition.module';
+import { RouterModule } from '@angular/router';
+import { MuseumCreateComponent } from './museum-create/museum-create.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,12 +16,15 @@ import { ExhibitionModule } from '../exhibition/exhibition.module';
     CommonModule,
     NgxPaginationModule,
     ArtworkModule,
-    ExhibitionModule
+    ExhibitionModule,
+    RouterModule,
+    ReactiveFormsModule
   ],
   declarations: [
     MuseumListComponent,
-    MuseumDetailComponent
+    MuseumDetailComponent,
+    MuseumCreateComponent
   ],
-  exports: [MuseumListComponent, MuseumDetailComponent]
+  exports: [MuseumListComponent, MuseumDetailComponent, MuseumCreateComponent]
 })
 export class MuseumModule { }

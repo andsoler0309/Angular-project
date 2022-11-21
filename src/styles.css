@@ -15,7 +15,6 @@ color: white !important;
   color: red!important
 }
 
-
 pagination-controls {
   display: flex;
   align-items: center;
@@ -23,10 +22,3 @@ pagination-controls {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-
-li.current {
-  background: black !important;
-  color: white;
-  border-radius: 4px;
-}
-

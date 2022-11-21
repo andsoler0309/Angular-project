@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-custom">
   <div class="container-fluid">
-    <a i18n class="navbar-brand" href="#" [routerLink]="['/museums']">Explore Museums</a>
+    <a i18n class="navbar-brand" href="#" [routerLink]="['/museums-list']">Explore Museums</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a i18n class="nav-link active" aria-current="page" [routerLink]="['/museums']">Home</a>
+          <a i18n class="nav-link active" aria-current="page" [routerLink]="['/museums-list']">Home</a>
         </li>
         <li class="nav-item">
           <a i18n class="nav-link active" [routerLink]="['/artworks/list']">Explore Artworks</a>
@@ -22,6 +22,8 @@
             <li><a i18n class="dropdown-item" [routerLink]="['/artworks/create']">Create Artwork</a></li>
             <li><a i18n class="dropdown-item" [routerLink]="['/artist/create']">Create Artist</a></li>
             <li><a i18n class="dropdown-item" [routerLink]="['/exhibitions/create']">Create Exhibition</a></li>
+            <li><a i18n class="dropdown-item" [routerLink]="['/create-museum']">Create Museum</a></li>
+            <li><a i18n class="dropdown-item" [routerLink]="['/create-image']">Create Image</a></li>
           </ul>
         </li>
         <li class="nav-item">

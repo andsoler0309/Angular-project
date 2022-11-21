@@ -16,7 +16,14 @@ export class MuseumService {
 
   getMuseums(): Observable<Museum[]> {
     return this.http.get<Museum[]>(this.apiUrl);
+  }
 
+  getMuseum(id: string): Observable<Museum> {
+    return this.http.get<Museum>(this.apiUrl + "/" + id);
+  }
+
+  createMuseum(museum: Museum): Observable<Museum> {
+    return this.http.post<Museum>(this.apiUrl, museum);
   }
 }
 

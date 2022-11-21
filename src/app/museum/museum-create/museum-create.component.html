@@ -1,0 +1,195 @@
+<div class="container mt-4">
+  <h2 class="text-center">Create a new museum</h2>
+  <form
+    [formGroup]="museumForm"
+    (ngSubmit)="!museumForm.invalid && createMuseum(museumForm.value)"
+  >
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="name">Name</label>
+      <input
+        novalidate
+        id="name"
+        class="form-control"
+        formControlName="name"
+        placeholder="Museum's name"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          museumForm.get('name')!.hasError('required') &&
+          museumForm.get('name')!.touched
+        "
+      >
+        Name required
+      </div>
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="museumForm.get('name')!.hasError('minlength')"
+      >
+        Name too short
+      </div>
+    </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="image">Image</label>
+      <input
+        novalidate
+        id="image"
+        class="form-control"
+        formControlName="image"
+        placeholder="Museum's image"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          museumForm.get('image')!.hasError('required') &&
+          museumForm.get('image')!.touched
+        "
+      >
+        Image required
+      </div>
+    </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="altImage">Alt Image</label>
+      <input
+        novalidate
+        id="altImage"
+        class="form-control"
+        formControlName="altImage"
+        placeholder="Museum's altImage"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          museumForm.get('altImage')!.hasError('required') &&
+          museumForm.get('altImage')!.touched
+        "
+      >
+      Alt Image required
+      </div>
+    </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="wImage">Width Image</label>
+      <input
+        novalidate
+        id="wImage" type="number"
+        class="form-control"
+        formControlName="wImage"
+        placeholder="Museum's wImage"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          museumForm.get('wImage')!.hasError('required') &&
+          museumForm.get('wImage')!.touched
+        "
+      >
+      Width Image required
+      </div>
+    </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="hImage">Height Image</label>
+      <input
+        novalidate
+        id="hImage" type="number"
+        class="form-control"
+        formControlName="hImage"
+        placeholder="Museum's height Image"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          museumForm.get('hImage')!.hasError('required') &&
+          museumForm.get('hImage')!.touched
+        "
+      >
+      Height Image required
+      </div>
+    </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="address">Address</label>
+      <input
+        novalidate
+        id="address"
+        class="form-control"
+        formControlName="address"
+        placeholder="Museum's address"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          museumForm.get('address')!.hasError('required') &&
+          museumForm.get('address')!.touched
+        "
+      >
+        Address required
+      </div>
+    </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="city">City</label>
+      <input
+        novalidate
+        id="city"
+        class="form-control"
+        formControlName="city"
+        placeholder="Museum's city"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          museumForm.get('city')!.hasError('required') &&
+          museumForm.get('city')!.touched
+        "
+      >
+        City required
+      </div>
+    </div>
+
+
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="description">Description</label>
+      <input
+        novalidate
+        id="description"
+        class="form-control"
+        formControlName="description"
+        placeholder="Museum's short description"
+      />
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="
+          museumForm.get('description')!.hasError('required') &&
+          museumForm.get('description')!.touched
+        "
+      >
+        Description required
+      </div>
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        *ngIf="museumForm.get('description')!.hasError('maxlength')"
+      >
+        Description too long
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!museumForm.valid"
+    >
+      Create
+    </button>
+    <button
+      type="button"
+      class="btn btn-danger ml-3"
+      (click)="cancelCreation()"
+    >
+      Cancel
+    </button>
+  </form>
+</div>

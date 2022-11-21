@@ -20,6 +20,12 @@
       <trans-unit id="1427432355378928966" datatype="html">
         <source>Create Artwork</source>
       </trans-unit>
+      <trans-unit id="8765110380106492127" datatype="html">
+        <source>Create Museum</source>
+      </trans-unit>
+      <trans-unit id="1427432355378928968" datatype="html">
+        <source>Create Image</source>
+      </trans-unit>
       <trans-unit id="7922989125096435449" datatype="html">
         <source>Contact</source>
       </trans-unit>
