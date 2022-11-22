@@ -29,4 +29,17 @@ describe('ArtworkCreateComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create a new artwork', () => {
+    component.artworkForm.controls['name'].setValue('Test artwork');
+    component.artworkForm.controls['year'].setValue(2021);
+    component.artworkForm.controls['description'].setValue('Test description');
+    component.artworkForm.controls['type'].setValue('Test type');
+    component.artworkForm.controls['artist'].setValue(1);
+    component.createArtwork(component.artworkForm.value);
+  });
+
+  it('should cancel the creation of a new artwork', () => {
+    component.cancelCreation();
+  });
 });

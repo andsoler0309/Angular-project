@@ -29,4 +29,14 @@ describe('MovementCreateComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create a new movement', () => {
+    component.movementForm.controls['name'].setValue('Test movement');
+    component.movementForm.controls['description'].setValue('Test description');
+    component.createMovement(component.movementForm.value);
+  });
+
+  it('should cancel the creation of a new movement', () => {
+    component.cancelCreation();
+  });
 });

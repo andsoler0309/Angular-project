@@ -28,8 +28,7 @@ export class MovementCreateComponent implements OnInit {
   }
 
   createMovement(movement: Movement){
-    this.movementService.createMovement(movement).subscribe(movement=>{
-      console.info('The movement was created: ', movement);
+    this.movementService.createMovement(movement).subscribe(()=>{
       this.toastr.success('Confirmation', 'movement created');
       this.movementForm.reset();
     });

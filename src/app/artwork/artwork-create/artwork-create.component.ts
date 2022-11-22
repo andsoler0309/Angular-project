@@ -18,7 +18,7 @@ export class ArtworkCreateComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private toastr: ToastrService,
+    public toastr: ToastrService,
     private artworkService: ArtworkService,
     private artistService: ArtistService,
   ) { }
@@ -36,10 +36,7 @@ export class ArtworkCreateComponent implements OnInit {
 
   createArtwork(artwork: Artwork){
     artwork.artist = { id: artwork.artist.id } as unknown as Artist;
-    console.log(artwork);
-
-    this.artworkService.createArtwork(artwork).subscribe(artwork=>{
-      console.info('The artwork was created: ', artwork);
+    this.artworkService.createArtwork(artwork).subscribe(()=>{
       this.toastr.success('Confirmation', 'artwork created');
       this.artworkForm.reset();
     });
