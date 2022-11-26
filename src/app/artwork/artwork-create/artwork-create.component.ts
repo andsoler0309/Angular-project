@@ -26,10 +26,10 @@ export class ArtworkCreateComponent implements OnInit {
   ngOnInit() {
     this.artworkForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
-      year: [0, Validators.required],
+      year: [1899, Validators.required],
       description: ['', [Validators.required, Validators.maxLength(100)]],
       type: ['', Validators.required],
-      artist: ['', Validators.required],
+      artist: ['default', Validators.required],
     });
     this.getAllArtist();
   }
