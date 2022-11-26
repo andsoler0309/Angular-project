@@ -42,9 +42,6 @@ export class ExhibitionListComponent implements OnInit {
         this.currentSponsorWebsite = ex.sponsor.website;
         this.selected = true;
       }
-      else{
-        this.selected = false;
-      }
     }
   }
 }
