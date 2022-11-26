@@ -3,12 +3,10 @@
 <div class="container-fluid">
   <div class="row text-center">
     <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-3" *ngFor="let exhibition of exhibitions">
-          <button (click)="displayDetail(exhibition.name)" type="button" class="btn btn-dark">{{ exhibition.name }}</button>
+        <div class="row" *ngFor="let exhibition of exhibitions">
+          <button (click)="displayDetail(exhibition.name)" type="button" class="btn btn-dark btn-block">{{ exhibition.name }}</button>
         </div>
         </div>
-      </div>
     </div>
   </div>
 
