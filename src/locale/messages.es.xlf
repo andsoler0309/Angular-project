@@ -236,6 +236,10 @@
         <source>This museum has no exhibitions.</source>
         <target state="new">Este museo no tiene exhibiciones.</target>
       </trans-unit>
+      <trans-unit id="1983905724681262457" datatype="html">
+        <source>This museum has no artworks.</source>
+        <target state="new">Este museo no tiene obras de arte.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
