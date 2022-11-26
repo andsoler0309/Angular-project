@@ -51,3 +51,8 @@
 .card-text-light {
   color: #707070;
 }
+
+.btn-primary{
+  background-color: #253c7f;
+  color: white;
+}
