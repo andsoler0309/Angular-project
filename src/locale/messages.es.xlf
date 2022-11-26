@@ -19,7 +19,8 @@
         <target> Crear </target>
       </trans-unit>
       <trans-unit id="7941428823403788384" datatype="html">
-        <source> Crear </source>
+        <source> Create </source>
+        <target state="new"> Create </target>
       </trans-unit>
       <trans-unit id="8765110380106492126" datatype="html">
         <source>Crear Museo</source>
@@ -222,6 +223,18 @@
       <trans-unit id="6059878877377502612" datatype="html">
         <source>Related Artistic Movements</source>
         <target state="new">Movimientos pictóricos relacionados</target>
+      </trans-unit>
+      <trans-unit id="5922930518515086823" datatype="html">
+        <source>Create Museum</source>
+        <target state="new">Create Museum</target>
+      </trans-unit>
+      <trans-unit id="2365469758368321363" datatype="html">
+        <source>Create Image</source>
+        <target state="new">Create Image</target>
+      </trans-unit>
+      <trans-unit id="8421764948986853325" datatype="html">
+        <source>This museum has no exhibitions.</source>
+        <target state="new">Este museo no tiene exhibiciones.</target>
       </trans-unit>
     </body>
   </file>
