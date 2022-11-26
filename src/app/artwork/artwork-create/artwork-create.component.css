@@ -8,3 +8,13 @@
   width: 50%;
   height: 30px;
 }
+
+.btn-primary{
+  background-color: #237985;
+  color: white;
+}
+
+.btn-danger{
+  background-color: #81394d;
+  color: white;
+}

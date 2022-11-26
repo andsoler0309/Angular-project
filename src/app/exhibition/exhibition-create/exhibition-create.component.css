@@ -10,3 +10,13 @@ h2 {
 input, label {
   display:block;
 }
+
+.btn-primary{
+  background-color: #237985;
+  color: white;
+}
+
+.btn-danger{
+  background-color: #81394d;
+  color: white;
+}
