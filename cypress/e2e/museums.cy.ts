@@ -5,7 +5,7 @@ describe('Museums list test', () => {
 
     cy.contains('Listado de Museos');
 
-    cy.get('div.col-md-3').should('have.length', 3);
+    cy.get('div.col-md-3').should('have.length', 4);
   });
 
   it('get the detail of an museums', () => {
