@@ -167,6 +167,9 @@
       <trans-unit id="8421764948986853325" datatype="html">
         <source>This museum has no exhibitions.</source>
       </trans-unit>
+      <trans-unit id="1983905724681262457" datatype="html">
+        <source>This museum has no artworks.</source>
+      </trans-unit>
       <trans-unit id="8639256113241284486" datatype="html">
         <source>Related Image</source>
       </trans-unit>
