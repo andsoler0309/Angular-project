@@ -21,8 +21,7 @@ describe('ImageCreateComponent', () => {
         })
       ],
       declarations: [ ImageCreateComponent ]
-    })
-    .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {

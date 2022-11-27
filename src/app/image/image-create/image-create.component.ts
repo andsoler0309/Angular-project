@@ -19,13 +19,12 @@ export class ImageCreateComponent implements OnInit {
   ) { }
 
   createImage(image: any){
-    delete image.id
-    console.log(image)
+    delete image.id;
     this.imageService.createImage(image).subscribe(image=>{
-      console.info("The image was created: ", image)
-      this.toastr.success("Confirmation", "Image created")
+      console.info('The image was created: ', image);
+      this.toastr.success('Confirmation', 'Image created');
       this.imageForm.reset();
-    })
+    });
   }
 
   cancelCreation(){
@@ -38,7 +37,7 @@ export class ImageCreateComponent implements OnInit {
       altText: ['', Validators.required],
       width: ['', Validators.required],
       height: ['', Validators.required]
-    })
+    });
   }
 
 }
