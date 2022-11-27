@@ -146,9 +146,6 @@
       <trans-unit id="5577412723235121565" datatype="html">
         <source> Please enter the birth date using the format &quot;YYYY-MM-DD&quot; </source>
       </trans-unit>
-      <trans-unit id="6059878877377502612" datatype="html">
-        <source>Related Artistic Movements</source>
-      </trans-unit>
       <trans-unit id="8167007771609098494" datatype="html">
         <source>Create a new artist</source>
       </trans-unit>
@@ -169,6 +166,9 @@
       </trans-unit>
       <trans-unit id="8421764948986853325" datatype="html">
         <source>This museum has no exhibitions.</source>
+      </trans-unit>
+      <trans-unit id="8639256113241284486" datatype="html">
+        <source>Related Image</source>
       </trans-unit>
     </body>
   </file>

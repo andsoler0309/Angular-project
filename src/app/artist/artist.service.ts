@@ -5,13 +5,14 @@ import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Artist } from './artist';
 import { Movement } from '../movement/movement';
+import { Image } from '../image/image';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArtistService {
   private apiUrl: string = environment.baseUrl + 'artists';
-  private apiUrlMovements: string = environment.baseUrl + 'movements';
+  private apiUrlImages: string = environment.baseUrl + 'images';
 
 
   constructor(private http: HttpClient) { }
@@ -20,8 +21,8 @@ export class ArtistService {
     return this.http.get<Artist[]>(this.apiUrl);
   }
 
-  getMovements(): Observable<Movement[]> {
-    return this.http.get<Movement[]>(this.apiUrlMovements);
+  getImages(): Observable<Image[]> {
+    return this.http.get<Image[]>(this.apiUrlImages);
   }
 
   createArtist(artist: Artist): Observable<Artist> {

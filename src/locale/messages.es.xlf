@@ -220,21 +220,21 @@
         <source> Please enter the birth date using the format &quot;YYYY-MM-DD&quot; </source>
         <target state="new"> Por favor, entre una fecha de nacimiento usando el formato &quot;AAAA-MM-DD&quot; </target>
       </trans-unit>
-      <trans-unit id="6059878877377502612" datatype="html">
-        <source>Related Artistic Movements</source>
-        <target state="new">Movimientos pictóricos relacionados</target>
-      </trans-unit>
       <trans-unit id="5922930518515086823" datatype="html">
         <source>Create Museum</source>
-        <target state="new">Create Museum</target>
+        <target state="new">Crear museo</target>
       </trans-unit>
       <trans-unit id="2365469758368321363" datatype="html">
         <source>Create Image</source>
-        <target state="new">Create Image</target>
+        <target state="new">Crear imagen</target>
       </trans-unit>
       <trans-unit id="8421764948986853325" datatype="html">
         <source>This museum has no exhibitions.</source>
         <target state="new">Este museo no tiene exhibiciones.</target>
+      </trans-unit>
+      <trans-unit id="8639256113241284486" datatype="html">
+        <source>Related Image</source>
+        <target state="new">Imagen relacionada</target>
       </trans-unit>
     </body>
   </file>

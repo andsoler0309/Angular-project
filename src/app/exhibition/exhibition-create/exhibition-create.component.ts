@@ -12,14 +12,14 @@ import { Sponsor } from 'src/app/sponsor';
 })
 export class ExhibitionCreateComponent implements OnInit {
   exhibitionForm!: FormGroup;
-  sponsors: Array<Sponsor> = [new Sponsor("Test sponsor 1", "Test description", "https://github.com/MISW-4104-Web/MISW4104_202215_Equipo21"),
-    new Sponsor("Test sponsor 2", "Test description", "https://github.com/MISW-4104-Web/MISW4104_202215_Equipo21")];
+  sponsors: Array<Sponsor> = [];
 
   constructor(private exhibitionService: ExhibitionService,
     private formBuilder: FormBuilder,
     private toastr: ToastrService) { }
 
   ngOnInit() {
+    this.getAllSponsors();
     this.exhibitionForm = this.formBuilder.group({
       name: ["", [Validators.required, Validators.minLength(2)]],
       description: ["", [Validators.required, Validators.maxLength(100)]],
@@ -39,6 +39,12 @@ export class ExhibitionCreateComponent implements OnInit {
     this.exhibitionForm.reset();
     console.info("The creation was canceled")
     this.toastr.info("Confirmation", "Creation canceled")
+  }
+
+  getAllSponsors(){
+    this.exhibitionService.getSponsors().subscribe(sponsors=>{
+      this.sponsors = sponsors;
+    });
   }
 
 }

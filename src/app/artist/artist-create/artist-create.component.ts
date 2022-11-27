@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ToastrService } from 'ngx-toastr';
 import { ArtistService } from '../artist.service';
 import { Artist } from '../artist';
-import { Movement } from 'src/app/movement/movement';
+import { Image } from 'src/app/image/image';
 
 
 @Component({
@@ -13,7 +13,7 @@ import { Movement } from 'src/app/movement/movement';
 })
 export class ArtistCreateComponent implements OnInit {
   artistForm!: FormGroup;
-  movements: Array<Movement> = [];
+  images: Array<Image> = [];
 
 
   constructor(private artistService: ArtistService,
@@ -21,12 +21,12 @@ export class ArtistCreateComponent implements OnInit {
     private toastr: ToastrService) { }
 
   ngOnInit() {
-    this.getMovements();
+    this.getImages();
     this.artistForm = this.formBuilder.group({
       name: ["", [Validators.required, Validators.minLength(2)]],
       birthplace: ["", Validators.required],
       birthdate: ["", [Validators.required,Validators.minLength(10), Validators.maxLength(10)]],
-      movements: [""],
+      image: [""],
     });
   }
 
@@ -44,9 +44,9 @@ export class ArtistCreateComponent implements OnInit {
     this.toastr.info("Confirmation", "Creation canceled")
   }
 
-  getMovements(){
-    this.artistService.getMovements().subscribe(movements=>{
-      this.movements = movements;
+  getImages(){
+    this.artistService.getImages().subscribe(images=>{
+      this.images = images;
     });
   }
 }

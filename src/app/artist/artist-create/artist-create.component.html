@@ -78,16 +78,16 @@
         Please enter the birth date using the format "YYYY-MM-DD"
       </div>
     </div>
-    <!--related movements-->
-    <div class="form-group mx-sm-3 mb-2 exhibition-selector__dropdown">
-      <label for="movements" i18n>Related Artistic Movements</label>
+    <!--related image-->
+    <div class="form-group mx-sm-3 mb-2 image-selector__dropdown">
+      <label for="image-selector__dropdown" i18n>Related Image</label>
       <select
-          id="movements"
+          id="image"
           class="form-control"
-          formControlName="movements"
-          multiple>
-          <option *ngFor="let movement of movements" [ngValue]="movement">
-            {{ movement.name }}
+          formControlName="image"
+          >
+          <option *ngFor="let image of images" [ngValue]="image.id">
+            {{ image.id }}
           </option>
         </select>
     </div>
