@@ -27,7 +27,11 @@ export class HttpErrorInterceptorService extends HttpErrorResponse {
             errorType = 'Server side error';
             if (httpErrorResponse.status === 0) {
               errorMesagge = 'No hay conexión con el servidor';
-            } else {
+            }
+            else if (httpErrorResponse.status === 412){
+              errorMesagge = 'Sponsor already has an exhibition';
+            }
+            else {
               errorMesagge = `${httpErrorResponse.status}: ${httpErrorResponse.error.error}`;
             }
             this.toastrService.error(errorMesagge, errorType, { closeButton: true });
