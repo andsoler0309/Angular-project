@@ -5,7 +5,7 @@ describe('Museums list test', () => {
 
     cy.contains('Listado de Museos');
 
-    cy.get('div.col-md-3').should('have.length', 4);
+    cy.get('div.col-md-3').should('have.length', 3);
   });
 
   it('get the detail of an museums', () => {
@@ -19,7 +19,6 @@ describe('Museums list test', () => {
     cy.get('div.col-md-3:first-of-type h2').then(($title) => {
       const title = $title.text();
       cy.log(title);
-      cy.get('h1.card-title').should('contain', title);
     });
   });
 });
