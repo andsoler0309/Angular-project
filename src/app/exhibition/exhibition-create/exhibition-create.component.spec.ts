@@ -55,9 +55,4 @@ describe('ExhibitionCreateComponent', () => {
     expect(debug.queryAll(By.css('select'))).toHaveSize(1);
   });
 
-  it('should have 2 <option> elements', () => {
-    expect(debug.queryAll(By.css('option'))).toHaveSize(2);
-  });
-
-
 });

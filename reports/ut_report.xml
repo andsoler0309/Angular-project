@@ -1,117 +1,116 @@
 <testExecutions version="1">
-  <file path="src/app/image/image-create/image-create.component.spec.ts">
-    <testCase name="ImageCreateComponent should create" duration="29"/>
-  </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="19"/>
-  </file>
-  <file path="src/app/museum/museum.service.spec.ts">
-    <testCase name="MuseumService should ..." duration="1"/>
-  </file>
-  <file path="src/app/movement/movement-create/movement-create.component.spec.ts">
-    <testCase name="MovementCreateComponent should cancel the creation of a new movement" duration="8"/>
-    <testCase name="MovementCreateComponent should create" duration="3"/>
-    <testCase name="MovementCreateComponent should create a new movement" duration="3"/>
+  <file path="src/app/museum/museum-create/museum-create.component.spec.ts">
+    <testCase name="MuseumCreateComponent should create" duration="58"/>
   </file>
   <file path="src/app/interceptors/http-error-interceptor.service.spec.ts">
-    <testCase name="Service: HttpErrorInterceptor should ..." duration="1"/>
-  </file>
-  <file path="src/app/artist/artist-create/artist-create.component.spec.ts">
-    <testCase name="ArtistCreateComponent should have 2 &lt;button> elements" duration="7"/>
-    <testCase name="ArtistCreateComponent should have 3 &lt;input> elements" duration="3"/>
-    <testCase name="ArtistCreateComponent should create" duration="2"/>
-    <testCase name="ArtistCreateComponent should have 1 &lt;h1> element" duration="2"/>
-    <testCase name="ArtistCreateComponent should have 1 &lt;form> element" duration="3"/>
-    <testCase name="ArtistCreateComponent should have 4 &lt;label> elements" duration="2"/>
-    <testCase name="ArtistCreateComponent should have 1 &lt;select> element" duration="2"/>
-  </file>
-  <file path="src/app/museum/museum-list/museum-list.component.spec.ts">
-    <testCase name="MuseumListComponent should create" duration="4"/>
-    <testCase name="MuseumListComponent should call service to get museums" duration="3"/>
-  </file>
-  <file path="src/app/artwork/artwork-detail/artwork-detail.component.spec.ts">
-    <testCase name="ArtworkDetailComponent if pic doesnt load, should display the second image" duration="6"/>
-    <testCase name="ArtworkDetailComponent should use scrollBottom() when the component is initialized" duration="2"/>
-    <testCase name="ArtworkDetailComponent should display the artwork artist" duration="1"/>
-    <testCase name="ArtworkDetailComponent should use pictNotLoadingDetail() when the image is not loading" duration="1"/>
-    <testCase name="ArtworkDetailComponent should display the artwork description" duration="2"/>
-    <testCase name="ArtworkDetailComponent should display the artwork image" duration="1"/>
-    <testCase name="ArtworkDetailComponent should create" duration="1"/>
-    <testCase name="ArtworkDetailComponent should display the artwork title" duration="1"/>
-  </file>
-  <file path="src/app/artwork/artwork-list/artwork-list.component.spec.ts">
-    <testCase name="ArtworkListComponent should get museum artworks if input is museum" duration="7"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with image" duration="3"/>
-    <testCase name="ArtworkListComponent should get artowkrs from the service" duration="3"/>
-    <testCase name="ArtworkListComponent should have 4 &lt;img> elements" duration="3"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with image url" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks" duration="4"/>
-    <testCase name="ArtworkListComponent should have 4 &lt;div.card-body> elements" duration="3"/>
-    <testCase name="ArtworkListComponent if pic doesnt load, should display the second image" duration="3"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with title" duration="2"/>
-    <testCase name="ArtworkListComponent should create" duration="3"/>
-    <testCase name="ArtworkListComponent should call service to get artworks" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist country" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist movements" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist movements description" duration="2"/>
-    <testCase name="ArtworkListComponent should have the corresponding src to the artwork image and alt to the artwork name" duration="3"/>
-    <testCase name="ArtworkListComponent should selected change when clicked twice" duration="3"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist birthdate" duration="2"/>
-    <testCase name="ArtworkListComponent should have 4 &lt;h2.card-title> elements" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist movements name" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist" duration="2"/>
-    <testCase name="ArtworkListComponent should selected change when clicked" duration="2"/>
-    <testCase name="ArtworkListComponent should have a list of artworks with artist name" duration="2"/>
-  </file>
-  <file path="src/app/museum/museum-detail/museum-detail.component.spec.ts">
-    <testCase name="MuseumDetailComponent should create" duration="3"/>
-  </file>
-  <file path="src/app/artist/artist.service.spec.ts">
-    <testCase name="Service: Artist should ..." duration="1"/>
-  </file>
-  <file path="src/app/artwork/artwork-create/artwork-create.component.spec.ts">
-    <testCase name="ArtworkCreateComponent should create a new artwork" duration="8"/>
-    <testCase name="ArtworkCreateComponent should cancel the creation of a new artwork" duration="2"/>
-    <testCase name="ArtworkCreateComponent should create" duration="2"/>
-  </file>
-  <file path="src/app/image/image.service.spec.ts">
-    <testCase name="ImageService should be created" duration="1"/>
-  </file>
-  <file path="src/app/museum/museum-create/museum-create.component.spec.ts">
-    <testCase name="MuseumCreateComponent should create" duration="5"/>
-  </file>
-  <file path="src/app/artwork/artwork.service.spec.ts">
-    <testCase name="Service: Artwork should getArtworkDetail" duration="1"/>
-    <testCase name="Service: Artwork should getMuseumsArtworks" duration="1"/>
-    <testCase name="Service: Artwork should getArtworks" duration="1"/>
-    <testCase name="Service: Artwork should ..." duration="1"/>
-  </file>
-  <file path="src/app/exhibition/exhibition-create/exhibition-create.component.spec.ts">
-    <testCase name="ExhibitionCreateComponent should have 2 &lt;input> elements" duration="5"/>
-    <testCase name="ExhibitionCreateComponent should have 2 &lt;button> elements" duration="1"/>
-    <testCase name="ExhibitionCreateComponent should have 1 &lt;form> element" duration="2"/>
-    <testCase name="ExhibitionCreateComponent should create" duration="1"/>
-    <testCase name="ExhibitionCreateComponent should have 1 &lt;h1> element" duration="2"/>
-    <testCase name="ExhibitionCreateComponent should have 3 &lt;label> elements" duration="2"/>
-    <testCase name="ExhibitionCreateComponent should have 2 &lt;option> elements" duration="1"/>
-    <testCase name="ExhibitionCreateComponent should have 1 &lt;select> element" duration="1"/>
+    <testCase name="Service: HttpErrorInterceptor should ..." duration="2"/>
   </file>
   <file path="src/app/movement/movement.service.spec.ts">
-    <testCase name="Service: Movement should ..." duration="1"/>
+    <testCase name="Service: Movement should ..." duration="2"/>
   </file>
-  <file path="src/app/exhibition/exhibition-detail/exhibition-detail.component.spec.ts">
-    <testCase name="ExhibitionDetailComponent should have 3 &lt;li> elements" duration="1"/>
-    <testCase name="ExhibitionDetailComponent should have 1 &lt;h5> element" duration="1"/>
-    <testCase name="ExhibitionDetailComponent should have 1 &lt;a> element" duration="1"/>
-    <testCase name="ExhibitionDetailComponent should have 1 &lt;p> element" duration="1"/>
-    <testCase name="ExhibitionDetailComponent should have 1 &lt;card> element" duration="1"/>
-    <testCase name="ExhibitionDetailComponent should create" duration="1"/>
+  <file path="src/app/museum/museum.service.spec.ts">
+    <testCase name="MuseumService should ..." duration="2"/>
+  </file>
+  <file path="src/app/movement/movement-create/movement-create.component.spec.ts">
+    <testCase name="MovementCreateComponent should create a new movement" duration="21"/>
+    <testCase name="MovementCreateComponent should create" duration="7"/>
+    <testCase name="MovementCreateComponent should cancel the creation of a new movement" duration="4"/>
+  </file>
+  <file path="src/app/artwork/artwork-detail/artwork-detail.component.spec.ts">
+    <testCase name="ArtworkDetailComponent should display the artwork image" duration="14"/>
+    <testCase name="ArtworkDetailComponent should create" duration="6"/>
+    <testCase name="ArtworkDetailComponent if pic doesnt load, should display the second image" duration="5"/>
+    <testCase name="ArtworkDetailComponent should display the artwork description" duration="3"/>
+    <testCase name="ArtworkDetailComponent should display the artwork title" duration="4"/>
+    <testCase name="ArtworkDetailComponent should use pictNotLoadingDetail() when the image is not loading" duration="5"/>
+    <testCase name="ArtworkDetailComponent should display the artwork artist" duration="4"/>
+    <testCase name="ArtworkDetailComponent should use scrollBottom() when the component is initialized" duration="4"/>
+  </file>
+  <file path="src/app/museum/museum-detail/museum-detail.component.spec.ts">
+    <testCase name="MuseumDetailComponent should create" duration="8"/>
+  </file>
+  <file path="src/app/artwork/artwork-create/artwork-create.component.spec.ts">
+    <testCase name="ArtworkCreateComponent should cancel the creation of a new artwork" duration="21"/>
+    <testCase name="ArtworkCreateComponent should create a new artwork" duration="7"/>
+    <testCase name="ArtworkCreateComponent should create" duration="6"/>
+  </file>
+  <file path="src/app/museum/museum-list/museum-list.component.spec.ts">
+    <testCase name="MuseumListComponent should create" duration="12"/>
+    <testCase name="MuseumListComponent should call service to get museums" duration="5"/>
+  </file>
+  <file path="src/app/artwork/artwork.service.spec.ts">
+    <testCase name="Service: Artwork should getArtworks" duration="1"/>
+    <testCase name="Service: Artwork should getArtworkDetail" duration="1"/>
+    <testCase name="Service: Artwork should getMuseumsArtworks" duration="2"/>
+    <testCase name="Service: Artwork should ..." duration="1"/>
+  </file>
+  <file path="src/app/exhibition/exhibition-list/exhibition-list.component.spec.ts">
+    <testCase name="ExhibitionListComponent should have 10 &lt;button> elements" duration="11"/>
+    <testCase name="ExhibitionListComponent should ..." duration="5"/>
+  </file>
+  <file path="src/app/artwork/artwork-list/artwork-list.component.spec.ts">
+    <testCase name="ArtworkListComponent should get museum artworks if input is museum" duration="29"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist" duration="6"/>
+    <testCase name="ArtworkListComponent should create" duration="6"/>
+    <testCase name="ArtworkListComponent should have a list of artworks" duration="7"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with title" duration="5"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist movements name" duration="7"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with image" duration="6"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with image url" duration="7"/>
+    <testCase name="ArtworkListComponent should have 4 &lt;div.card-body> elements" duration="5"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist name" duration="7"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist birthdate" duration="7"/>
+    <testCase name="ArtworkListComponent should have the corresponding src to the artwork image and alt to the artwork name" duration="7"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist country" duration="6"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist movements description" duration="6"/>
+    <testCase name="ArtworkListComponent should have a list of artworks with artist movements" duration="6"/>
+    <testCase name="ArtworkListComponent should get artowkrs from the service" duration="6"/>
+    <testCase name="ArtworkListComponent should selected change when clicked" duration="6"/>
+    <testCase name="ArtworkListComponent should have 4 &lt;img> elements" duration="5"/>
+    <testCase name="ArtworkListComponent should selected change when clicked twice" duration="5"/>
+    <testCase name="ArtworkListComponent if pic doesnt load, should display the second image" duration="7"/>
+    <testCase name="ArtworkListComponent should have 4 &lt;h2.card-title> elements" duration="5"/>
+    <testCase name="ArtworkListComponent should call service to get artworks" duration="6"/>
   </file>
   <file path="src/app/exhibition/exhibition-list/exhibition.service.spec.ts">
     <testCase name="Service: Exhibition should ..." duration="1"/>
   </file>
-  <file path="src/app/exhibition/exhibition-list/exhibition-list.component.spec.ts">
-    <testCase name="ExhibitionListComponent should ..." duration="2"/>
-    <testCase name="ExhibitionListComponent should have 10 &lt;button> elements" duration="1"/>
+  <file path="src/app/artist/artist.service.spec.ts">
+    <testCase name="Service: Artist should ..." duration="2"/>
+  </file>
+  <file path="src/app/exhibition/exhibition-detail/exhibition-detail.component.spec.ts">
+    <testCase name="ExhibitionDetailComponent should have 1 &lt;h5> element" duration="3"/>
+    <testCase name="ExhibitionDetailComponent should have 1 &lt;a> element" duration="2"/>
+    <testCase name="ExhibitionDetailComponent should have 3 &lt;li> elements" duration="4"/>
+    <testCase name="ExhibitionDetailComponent should have 1 &lt;card> element" duration="2"/>
+    <testCase name="ExhibitionDetailComponent should create" duration="2"/>
+    <testCase name="ExhibitionDetailComponent should have 1 &lt;p> element" duration="2"/>
+  </file>
+  <file path="src/app/artist/artist-create/artist-create.component.spec.ts">
+    <testCase name="ArtistCreateComponent should have 1 &lt;h1> element" duration="12"/>
+    <testCase name="ArtistCreateComponent should have 4 &lt;label> elements" duration="5"/>
+    <testCase name="ArtistCreateComponent should create" duration="5"/>
+    <testCase name="ArtistCreateComponent should have 3 &lt;input> elements" duration="5"/>
+    <testCase name="ArtistCreateComponent should have 1 &lt;form> element" duration="5"/>
+    <testCase name="ArtistCreateComponent should have 1 &lt;select> element" duration="4"/>
+    <testCase name="ArtistCreateComponent should have 2 &lt;button> elements" duration="5"/>
+  </file>
+  <file path="src/app/exhibition/exhibition-create/exhibition-create.component.spec.ts">
+    <testCase name="ExhibitionCreateComponent should have 3 &lt;label> elements" duration="9"/>
+    <testCase name="ExhibitionCreateComponent should have 2 &lt;button> elements" duration="4"/>
+    <testCase name="ExhibitionCreateComponent should create" duration="4"/>
+    <testCase name="ExhibitionCreateComponent should have 1 &lt;form> element" duration="4"/>
+    <testCase name="ExhibitionCreateComponent should have 1 &lt;select> element" duration="5"/>
+    <testCase name="ExhibitionCreateComponent should have 2 &lt;input> elements" duration="5"/>
+    <testCase name="ExhibitionCreateComponent should have 1 &lt;h1> element" duration="4"/>
+  </file>
+  <file path="src/app/image/image-create/image-create.component.spec.ts">
+    <testCase name="ImageCreateComponent should create" duration="8"/>
+  </file>
+  <file path="src/app/image/image.service.spec.ts">
+    <testCase name="ImageService should be created" duration="1"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="11"/>
   </file>
 </testExecutions>

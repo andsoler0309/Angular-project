@@ -7,7 +7,7 @@
       <p i18n>This museum has no exhibitions.</p>
       </div>
         <div class="row" *ngFor="let exhibition of exhibitions">
-          <button (click)="displayDetail(exhibition.name)" type="button" class="btn btn-dark btn-block">{{ exhibition.name }}</button>
+          <button (click)="displayDetail(exhibition.name)" type="button" id="{{ exhibition.name }}" class="btn btn-dark btn-block">{{ exhibition.name }}</button>
         </div>
         </div>
     </div>

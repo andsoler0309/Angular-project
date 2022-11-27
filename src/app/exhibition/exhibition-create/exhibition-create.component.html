@@ -52,14 +52,14 @@
       </div>
     </div>
     <!--Sponsor-->
-    <div class="form-group mx-sm-3 mb-2 exhibition-selector__dropdown">
-      <label i18n for="exhibition_dropdown">Sponsor</label>
+    <div class="form-group mx-sm-3 mb-2 exhibition-sponsor_dropdown">
+      <label i18n for="sponsor_dropdown">Sponsor</label>
       <select
-          id="exhibition_dropdown"
+          id="sponsor_dropdown"
           class="form-control"
           formControlName="sponsor"
         >
-          <option *ngFor="let sponsor of sponsors" [ngValue]="sponsor">
+          <option *ngFor="let sponsor of sponsors" [ngValue]="sponsor" id="{{sponsor.name}}">
             {{ sponsor.name }}
           </option>
     </select>
