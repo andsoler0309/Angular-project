@@ -56,4 +56,20 @@ describe('ArtistCreateComponent', () => {
     expect(debug.queryAll(By.css('select'))).toHaveSize(1);
   });
 
+  it('should cancel the creation of a new artist', () => {
+    component.cancelCreation();
+  });
+
+  it('should create a new artwork', () => {
+    component.artistForm.controls['name'].setValue('Emilia Bertolé');
+    component.artistForm.controls['birthplace'].setValue('Rosario, Argentina');
+    component.artistForm.controls['birthdate'].setValue('21-06-1896');
+    component.artistForm.controls['image'].setValue('01');
+    component.createArtist(component.artistForm.value);
+  });
+
+  it('should get the images from the back-end', () => {
+    component.getImages();
+  });
+
 });

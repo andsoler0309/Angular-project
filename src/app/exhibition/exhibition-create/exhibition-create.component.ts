@@ -29,7 +29,6 @@ export class ExhibitionCreateComponent implements OnInit {
 
   createExhibition(exhibition: Exhibition){
     this.exhibitionService.createExhibition(exhibition).subscribe(exhibition=>{
-      console.info("The exhibition was created: ", exhibition)
       this.toastr.success("Confirmation", "Exhibition created")
       this.exhibitionForm.reset();
     })
@@ -37,7 +36,6 @@ export class ExhibitionCreateComponent implements OnInit {
 
   cancelCreation(){
     this.exhibitionForm.reset();
-    console.info("The creation was canceled")
     this.toastr.info("Confirmation", "Creation canceled")
   }
 

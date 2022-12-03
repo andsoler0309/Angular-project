@@ -54,4 +54,12 @@ describe('ExhibitionListComponent', () => {
     expect(debug.queryAll(By.css('button'))).toHaveSize(10);
   });
 
+  it('should have a list of exhibitions', () => {
+    expect(component.exhibitions.length).toBeGreaterThan(0);
+  });
+
+  it('should display the detail of an exhibition', () => {
+    component.displayDetail(component.exhibitions[1].name);
+  });
+
 });
