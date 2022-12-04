@@ -240,6 +240,10 @@
         <source>Related Image</source>
         <target state="new">Imagen relacionada</target>
       </trans-unit>
+      <trans-unit id="7849903350343410620" datatype="html">
+        <source>Museums List</source>
+        <target state="new">Listado de museos</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

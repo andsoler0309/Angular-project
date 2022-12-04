@@ -32,7 +32,6 @@ export class ArtistCreateComponent implements OnInit {
 
   createArtist(artist: Artist){
     this.artistService.createArtist(artist).subscribe(artists=>{
-      console.info('The artist was created: ', artist);
       this.toastr.success('Confirmation', 'artist created');
       this.artistForm.reset();
     });

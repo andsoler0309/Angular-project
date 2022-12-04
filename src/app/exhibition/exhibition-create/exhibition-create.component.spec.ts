@@ -6,6 +6,7 @@ import { ExhibitionCreateComponent } from './exhibition-create.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Sponsor } from 'src/app/sponsor';
 
 describe('ExhibitionCreateComponent', () => {
   let component: ExhibitionCreateComponent;
@@ -53,6 +54,21 @@ describe('ExhibitionCreateComponent', () => {
 
   it('should have 1 <select> element', () => {
     expect(debug.queryAll(By.css('select'))).toHaveSize(1);
+  });
+
+  it('get the sponsors from the back-end', () => {
+    component.getAllSponsors();
+  });
+
+  it('should create a new exhibition', () => {
+    component.exhibitionForm.controls['name'].setValue('Arte argentino');
+    component.exhibitionForm.controls['description'].setValue('Esta es la descripción de la exhibición.');
+    component.exhibitionForm.controls['sponsor'].setValue('01');
+    component.createExhibition(component.exhibitionForm.value);
+  });
+
+  it('should cancel the creation of a new exhibition', () => {
+    component.cancelCreation();
   });
 
 });

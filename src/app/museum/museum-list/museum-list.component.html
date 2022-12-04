@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <h1>Listado de Museos</h1>
+      <h1 i18n>Museums List</h1>
       <div class="row text-center">
         <div class="col-md-3" *ngFor="let museum of museums | paginate: { itemsPerPage: 4, currentPage: p, id: 'museums'}" id="{{museum.name}}">
           <div class="card p-2 h-100" (click)="onSelected(museum)" >

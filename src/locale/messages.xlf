@@ -173,6 +173,9 @@
       <trans-unit id="8639256113241284486" datatype="html">
         <source>Related Image</source>
       </trans-unit>
+      <trans-unit id="7849903350343410620" datatype="html">
+        <source>Museums List</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>
