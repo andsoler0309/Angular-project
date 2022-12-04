@@ -1,29 +1,22 @@
-import { HttpClientModule } from '@angular/common/http';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { DebugElement } from '@angular/core';
+import { MuseumCreateComponent } from './museum-create.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-
-import { MuseumCreateComponent } from './museum-create.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('MuseumCreateComponent', () => {
   let component: MuseumCreateComponent;
   let fixture: ComponentFixture<MuseumCreateComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        ReactiveFormsModule,
-        HttpClientModule,
-        ToastrModule.forRoot({
-          timeOut: 10000,
-          positionClass: 'toast-bottom-right',
-          preventDuplicates: true,
-        })
-      ],
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [ReactiveFormsModule, ToastrModule.forRoot(), HttpClientModule],
       declarations: [ MuseumCreateComponent ]
     })
-    .compileComponents();
-  });
+      .compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MuseumCreateComponent);
@@ -34,4 +27,5 @@ describe('MuseumCreateComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
